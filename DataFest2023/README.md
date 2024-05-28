@@ -1,8 +1,8 @@
-### The American Statistical Association DataFest - 최우수상 수상 (2023)
-#### 2023.03.24 ~ 2023.03.26
+## The American Statistical Association DataFest - 최우수상 수상 (2023)
+### 2023.03.24 ~ 2023.03.26
 
 #### [프로젝트 소개]
-##### 아아아아
+##### 미국 변호사 협회에서 제공한 데이터를 활용하여 무료 법률 지원 서비스의 효율성을 개선한 프로젝트
 
 
 
