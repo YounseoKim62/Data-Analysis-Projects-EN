@@ -21,7 +21,7 @@
 1. 자산과 수입에 관련된 변수들이 범주형 변수 (Categorical Variable)로 저장되어 있어 **숫자형 변수 (Numeric Variable)로 변환**
 3. 의뢰인 데이터셋의 StateAbbr변수를 통해 주별 무료 법률 서비스 기준 데이터셋을 **LEFT JOIN하여 통합된 데이터셋 생성**
 4. AnnualIncome (수입 변수)가 NULL인 경우 자산 관련 변수들도 모두 NULL이므로 **AnnualIncome이 NULL인 의뢰인들을 제거**
-5. *(대회 진행요원이 자산과 관련된 변수들에서 의뢰인들이 0을 적는 대신 기입을 하지 않은 경우가 많다고 하여, 자산과 관련된 변수들에 한해서는 NULL 값을 0으로 간주함)* <br/> 
+5. *(대회 진행요원이 자산과 관련된 변수들에서 의뢰인들이 0을 적는 대신 기입을 하지 않은 경우가 많다고 하여, 자산과 관련된 변수들 중 1개 이상 기입한 의뢰인들에 한해서는 NULL 값을 0으로 간주함)* <br/> 
 자산과 관련된 변수들을 하나의 변수로 통합한 **sum_assets 파생변수 생성**
 
 <br/> 
@@ -32,8 +32,10 @@
 2. * 의뢰인의 sum_assets가 AllowedAssets (무료 법률 서비스 기준 자산)보다 낮을경우 ProBono_assets를 Y로 저장
    * 의뢰인의 sum_assets가 AllowedAssets (무료 법률 서비스 기준 자산)보다 높을경우 ProBono_assets를 N으로 저장
    * 주별 무료 법률 서비스 기준 데이터셋에 존재하지 않는 주 출신의 의뢰인의 경우 ProBono_assets를 NAA (No Allowed Assets)로 저장
+   * 자산 관련 변수들이 모두 NULL인 경우 기입을 하지 않은건지 오류가 있는건지 알 수 없음으로 NC (Not Classified)로 저장
 3. * 의뢰인의 ProBono_income과 ProBono_assets가 모두 Y인 경우 ProBono_final을 Y로 저장
    * 의뢰인의 ProBono_income과 ProBono_assets중 한가지라도 N인 경우 ProBono_final을 N으로 저장
    * 의뢰인의 ProBono_income이 Y이지만 ProBono_assets가 NAA인 경우 ProBono_final을 Y로 저장 (무료 법률 서비스 기준 자산이 없는 주들이 존재)
-
+   * 의뢰인의 ProBono_income이 N이지만 ProBono_assets가 NAA인 경우 ProBono_final을 N으로 저장
+   * 의뢰인의 ProBono_income과 상관없이 ProBono_assets가 NC인 경우 ProBono_final을 NC로 저장
 
