@@ -27,23 +27,11 @@
 <br/> 
 
 ### [알고리즘 개발]
-1. * 의뢰인의 AnnualIncome이 AllowedIncome (무료 법률 서비스 기준 수입)보다 낮을경우 ProBono_income을 Y로 저장
-   * 의뢰인의 AnnualIncome이 AllowedIncome (무료 법률 서비스 기준 수입)보다 높을경우 ProBono_income을 N으로 저장
-2. * 주별 무료 법률 서비스 기준 데이터셋에 존재하지 않는 주 출신의 의뢰인의 경우 ProBono_assets를 NAA (No Allowed Assets)로 저장
-   * 자산 관련 변수들이 모두 NULL인 경우 기입을 하지 않은건지 오류가 있는건지 알 수 없음으로 NC (Not Classified)로 저장
-   * 의뢰인의 sum_assets가 AllowedAssets (무료 법률 서비스 기준 자산)보다 낮을경우 ProBono_assets를 Y로 저장
-   * 의뢰인의 sum_assets가 AllowedAssets (무료 법률 서비스 기준 자산)보다 높을경우 ProBono_assets를 N으로 저장
-3. * 의뢰인의 ProBono_income과 ProBono_assets가 모두 Y인 경우 ProBono_final을 Y로 저장
-   * 의뢰인의 ProBono_income과 ProBono_assets중 한가지라도 N인 경우 ProBono_final을 N으로 저장
-   * 의뢰인의 ProBono_income이 Y이지만 ProBono_assets가 NAA인 경우 ProBono_final을 Y로 저장 (무료 법률 서비스 기준 자산이 없는 주들이 존재)
-   * 의뢰인의 ProBono_income이 N이지만 ProBono_assets가 NAA인 경우 ProBono_final을 N으로 저장
-   * 의뢰인의 ProBono_income과 상관없이 ProBono_assets가 NC인 경우 ProBono_final을 NC로 저장
-
 1. 수입 기준:
 * AnnualIncome이 AllowedIncome보다 낮으면 ProBono_income을 'Y', 높으면 'N'으로 저장
 2. 자산 기준:
-* 주별 무료 법률 기준 데이터셋에 없는 주 출신의 경우 ProBono_assets를 'NAA'로 저장
-* 자산 관련 변수들이 모두 NULL이면 ProBono_assets를 'NC'로 저장
+* 주별 무료 법률 기준 데이터셋에 없는 주 출신의 경우 ProBono_assets를 'NAA (No Allowed Assets)'로 저장
+* 자산 관련 변수들이 모두 NULL이면 ProBono_assets를 'NC (Not Classified)'로 저장
 * sum_assets가 AllowedAssets보다 낮으면 ProBono_assets를 'Y', 높으면 'N'으로 저장
 3. 최종 판정:
 * ProBono_income과 ProBono_assets가 모두 'Y'이면 ProBono_final을 'Y'로 저장
