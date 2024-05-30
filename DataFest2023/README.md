@@ -39,3 +39,14 @@
    * 의뢰인의 ProBono_income이 N이지만 ProBono_assets가 NAA인 경우 ProBono_final을 N으로 저장
    * 의뢰인의 ProBono_income과 상관없이 ProBono_assets가 NC인 경우 ProBono_final을 NC로 저장
 
+1. 수입 기준:
+* AnnualIncome이 AllowedIncome보다 낮으면 ProBono_income을 'Y', 높으면 'N'으로 저장
+2. 자산 기준:
+* 주별 무료 법률 기준 데이터셋에 없는 주 출신의 경우 ProBono_assets를 'NAA'로 저장
+* 자산 관련 변수들이 모두 NULL이면 ProBono_assets를 'NC'로 저장
+* sum_assets가 AllowedAssets보다 낮으면 ProBono_assets를 'Y', 높으면 'N'으로 저장
+3. 최종 판정:
+* ProBono_income과 ProBono_assets가 모두 'Y'이면 ProBono_final을 'Y'로 저장
+* ProBono_income 또는 ProBono_assets 중 하나라도 'N'이면 ProBono_final을 'N'으로 저장
+* ProBono_income이 'Y'이고 ProBono_assets가 'NAA'이면 ProBono_final을 'Y'로 저장 (무료 법률 서비스 기준 자산이 없는 주들이 존재)
+* ProBono_income과 상관없이 ProBono_assets가 'NC'이면 ProBono_final을 'NC'로 저장
