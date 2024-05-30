@@ -1,7 +1,7 @@
 ## The American Statistical Association DataFest - 최우수상 수상 (2023)
 * 2023.03.24 ~ 2023.03.26
 * 프로그래밍 언어: R (tidyverse, dplyr, ggplot2), Excel
-* 데이터 분석 기법: EDA, 데이터 전처리, 알고리즘 개
+* 데이터 분석 기법: EDA, 데이터 전처리, 알고리즘 개발
 
 <br/>
 
