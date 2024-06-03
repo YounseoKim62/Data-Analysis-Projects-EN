@@ -18,6 +18,7 @@
 <br/>
 
 ### [데이터 전처리]
+![image](https://github.com/YounseoKim62/Data-Analysis-Projects-KR/assets/161654460/dffae339-8f3b-472e-9039-20440363045f)
 1. AnnualIncome (수입 변수)가 NULL인 경우 자산 관련 변수들도 모두 NULL이므로 **AnnualIncome이 NULL인 의뢰인들을 제거**
 2. 자산과 수입에 관련된 변수들이 범주형 변수 (Categorical Variable)로 저장되어 있어 **숫자형 변수 (Numeric Variable)로 변환**
 3. 의뢰인 데이터셋의 StateAbbr변수를 통해 주별 무료 법률 서비스 기준 데이터셋을 **LEFT JOIN하여 통합된 데이터셋 생성**
