@@ -27,6 +27,7 @@
 <br/> 
 
 ### [알고리즘 개발]
+![image](https://github.com/YounseoKim62/Data-Analysis-Projects-KR/assets/161654460/64cb43c4-19ac-4c9f-9607-6429093e605b)
 1. 수입 기준:
 * AnnualIncome이 AllowedIncome보다 낮으면 ProBono_income을 'Y', 높으면 'N'으로 저장
 2. 자산 기준:
