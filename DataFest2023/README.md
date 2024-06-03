@@ -1,12 +1,16 @@
-## The American Statistical Association DataFest - 최우수상 수상 (2023)
+# The American Statistical Association DataFest - 최우수상 수상 (2023)
 * 2023.03.24 ~ 2023.03.26
 * 프로그래밍 언어: R (tidyverse, dplyr, ggplot2), Excel
 * 데이터 분석 기법: EDA, 데이터 전처리, 알고리즘 개발
 
 <br/>
 
-### [프로젝트 소개]
+## [프로젝트 소개]
 * 미국 변호사 협회에서 제공한 데이터셋들을 활용하여 무료 법률 지원 서비스의 효율성을 개선한 프로젝트
+
+<br/>
+
+## Step 1 (의뢰인의 무료 법률 서비스 자격 판별)
 
 <br/>
 
@@ -40,3 +44,9 @@
 * ProBono_income 또는 ProBono_assets 중 하나라도 'N'이면 ProBono_final을 'N'으로 저장
 * ProBono_income이 'Y'이고 ProBono_assets가 'NAA'이면 ProBono_final을 'Y'로 저장 (무료 법률 서비스 기준 자산이 없는 주들이 존재)
 * ProBono_income과 상관없이 ProBono_assets가 'NC'이면 ProBono_final을 'NC'로 저장
+
+<br/> 
+
+## Step 2 (효율적인 변호사와 의뢰인 매칭)
+
+<br/> 
