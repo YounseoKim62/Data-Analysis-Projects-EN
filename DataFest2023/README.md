@@ -15,7 +15,7 @@
 <br/>
 
 ### [문제점] 
-![image](https://github.com/YounseoKim62/Data-Analysis-Projects-KR/assets/161654460/5f49c270-5572-4cfa-8786-f2de19966bf9)
+![image](https://github.com/YounseoKim62/Data-Analysis-Projects-KR/assets/161654460/e12eb63d-11ec-43b3-8937-32e171cf4cd5)
 * 주 (State)마다 무료 법률 서비스 기준이 다름
 * 무료 법률 서비스 기준은 자산과 수입 두 가지 기준을 모두 충족해야 하며, 관련 변수들이 나뉘어져 있어 변호사들이 의뢰인이 무료 법률 서비스 기준에 부합하는지를 한눈에 판단하기 어려움
 
