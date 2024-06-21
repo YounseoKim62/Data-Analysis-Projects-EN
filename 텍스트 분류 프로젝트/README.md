@@ -69,6 +69,9 @@
   * xgb__n_estimators: 앙상블의 트리 수; 각 트리는 이전 트리의 오류를 수정
 * GridSearchCV를 통해 모든 조합을 테스트하여 가장 높은 f1_weighted 점수가 나온 파라미터 조합을 저장
 
+<br/>
 
+### 예측측
+![image](https://github.com/YounseoKim62/Data-Analysis-Projects-KR/assets/161654460/571ce30f-672d-47f8-a303-129db0c503c3)
 
-
+* f1_weighted 점수가 가장 높게 나온 파라미터 조합을 사용하여 테스트 데이터 셋의 결과값을 예측
