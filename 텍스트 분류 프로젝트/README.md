@@ -46,7 +46,7 @@
 
 <br/>
 
-## 머신러닝 (stacking algorithm)
+## (머신러닝: stacking algorithm)
 
 <br/>
 
