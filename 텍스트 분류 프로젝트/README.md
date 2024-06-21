@@ -15,7 +15,7 @@
 <br/>
 
 ### 소문자 변경과 특수문자 제거
-![image](https://github.com/YounseoKim62/Data-Analysis-Projects-KR/assets/161654460/b20c0174-b978-4770-b9f8-cb8fb09d1114)
+![image](https://github.com/YounseoKim62/Data-Analysis-Projects-KR/assets/161654460/e2cde325-479a-4aa1-a969-a9c666cb9a21)
 
 * 대문자와 소문자가 섞여 있으면 같은 단어를 다르게 인식할 수 있기 때문에, 'The', 'the'와 같은 단어들을 소문자로 통일하여 동일하게 인식하도록 함
 * 특수문자는 의미 있는 정보를 제공하지 않는 경우가 많아 제거
@@ -45,6 +45,19 @@
 * 예시: (0, 258) 0.06596는 첫 번째 문서의 258번째 단어의 중요도가 0.06596 (범위: 0 ~ 1)이라는 뜻
 
 <br/>
+
+## 머신러닝 (stacking algorithm)
+
+<br/>
+
+### stacking algorithm 모델 생성
+![image](https://github.com/YounseoKim62/Data-Analysis-Projects-KR/assets/161654460/28b3677b-641f-48f4-acc4-365b6b8d5a28)
+
+* 텍스트 데이터는 단어의 순서, 의미, 문맥 등을 고려해야 하므로 여러 모델의 강점을 결합하여 예측 정확성을 높일 수 있는 스태킹 알고리즘을 사용
+* 로지스틱 회귀는 텍스트 데이터의 선형적 관계를 잘 포착하고, XGBoost는 복잡한 텍스트 데이터의 비선형적 관계를 잘 설명하며, 나이브 베이즈는 텍스트 데이터를 간단하고 효과적으로 분류할 수 있음
+
+### 하이퍼파라미터 튜닝
+
 
 
 
