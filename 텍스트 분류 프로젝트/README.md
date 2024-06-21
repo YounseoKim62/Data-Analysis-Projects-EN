@@ -71,7 +71,7 @@
 
 <br/>
 
-### 예측측
+### 예측
 ![image](https://github.com/YounseoKim62/Data-Analysis-Projects-KR/assets/161654460/571ce30f-672d-47f8-a303-129db0c503c3)
 
 * f1_weighted 점수가 가장 높게 나온 파라미터 조합을 사용하여 테스트 데이터 셋의 결과값을 예측
