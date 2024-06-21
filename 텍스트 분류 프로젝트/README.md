@@ -1,1 +1,51 @@
 # 텍스트 분류 프로젝트 
+* 프로그래밍 언어 및 도구: Python (pandas, numpy, nltk, scikit-learn, xgboost)
+* 활용한 기술: 데이터 전처리, 머신러닝
+
+<br/>
+
+## [프로젝트 소개]
+* 2024년도 봄 학기 머신러닝 수업 파이널 프로젝트
+* 의료 진단 차트의 텍스트를 분류 알고리즘 모델을 활용하여 6개의 카테고리 중 한가지로 분류하였음
+
+<br/>
+
+## Step 1 (데이터 전처리)
+
+<br/>
+
+### 소문자 변경과 특수문자 제거
+![image](https://github.com/YounseoKim62/Data-Analysis-Projects-KR/assets/161654460/b20c0174-b978-4770-b9f8-cb8fb09d1114)
+
+* 대문자와 소문자가 섞여 있으면 같은 단어를 다르게 인식할 수 있기 때문에, 'The', 'the'와 같은 단어들을 소문자로 통일하여 동일하게 인식하도록 함
+* 특수문자는 의미 있는 정보를 제공하지 않는 경우가 많아 제거
+
+<br/>
+
+### 불용어 (stop words)제거
+![image](https://github.com/YounseoKim62/Data-Analysis-Projects-KR/assets/161654460/ecb835d1-596a-4bca-afab-364a5c8d9d3a)
+
+* 불용어는 의미 있는 정보를 제공하지 않기 때문에 제거
+* 불용어를 제거함으로써 모델이 더 의미 있는 단어들에 집중하게 되어 분류 작업에 더 잘 맞는 패턴과 관계를 쉽게 파악할 수 있음
+
+<br/>
+
+### 표제화 (lemmatization)
+![image](https://github.com/YounseoKim62/Data-Analysis-Projects-KR/assets/161654460/602f1bc9-3d0c-4390-b140-d97e8cb41e66)
+
+* 환자가 호소하는 증상, 치료받은 기록과 같은 행동에 관련된 텍스트 데이터이기 때문에 동사 형태로 표제화 함
+* 다양한 형태로 변형된 단어들을 기본 동사 형태로 일관되게 처리하여 중복된 뜻의 단어들과 노이즈를 제거하여 모델의 성능을 향상 시킬 수 있음
+
+<br/>
+
+### 벡터라이징 (TF-IDF)
+![image](https://github.com/YounseoKim62/Data-Analysis-Projects-KR/assets/161654460/96e79673-224e-4747-8648-070e4973d3bd)
+
+* TF-IDF는 텍스트를 토크나이징한 후, 단어의 중요도를 평가하여 문서 내에서의 중요도를 계산하고 이를 벡터로 변환
+* 예시: (0, 258) 0.06596는 첫 번째 문서의 258번째 단어의 중요도가 0.06596 (범위: 0 ~ 1)이라는 뜻
+
+<br/>
+
+
+
+
