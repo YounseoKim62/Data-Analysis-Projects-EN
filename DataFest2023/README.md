@@ -1,8 +1,8 @@
 # The American Statistical Association DataFest - 최우수상 수상 (2023)
 * Team Megabyte (Younseo Kim, Yong Jun Choi, Woosung Lim, Hyeongkwon Kim & Taehwan Lee)
 * 2023.03.25 ~ 2023.03.26
-* 프로그래밍 스킬: R (tidyverse, dplyr, ggplot2), Tableau, Excel, Figma
-* 사용된 스킬: EDA, 데이터 전처리, 알고리즘 개발, 프로토타입 제작
+* 프로그래밍 언어 및 도구: R (tidyverse, dplyr, ggplot2), Tableau, Excel, Figma
+* 활용한 기술: EDA, 데이터 전처리, 알고리즘 개발, 프로토타입 UI/UX 디자인
 
 <br/>
 
