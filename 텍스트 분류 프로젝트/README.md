@@ -75,3 +75,22 @@
 ![image](https://github.com/YounseoKim62/Data-Analysis-Projects-KR/assets/161654460/571ce30f-672d-47f8-a303-129db0c503c3)
 
 * f1_weighted 점수가 가장 높게 나온 파라미터 조합을 사용하여 테스트 데이터 셋의 결과값을 예측
+
+<br/>
+
+### 점수 (mean F-1 score)
+![image](https://github.com/YounseoKim62/Data-Analysis-Projects-KR/assets/161654460/d3c79428-4cdb-4e0b-968d-a0921437d019)
+
+* Mean F-1 score의 값이 0.85로 이는 모델이 높은 정밀도 (모델이 True로 분류한 사례 중 85%가 실제로 True임)와 높은 재현율 (실제 True로 분류한 사례 중 85%를 모델이 예측함)을 구현
+* 모델이 실제로 긍정인 사례를 잘 찾아내며, False Positive (오탐)와 True Positive를 놓치는 경우 (누락)가 적다는 것을 의미
+
+
+
+
+
+
+
+
+높은 정밀도: 모델이 예측한 긍정 사례 중 85%가 실제로 긍정 사례임.
+높은 재현율: 실제 긍정 사례 중 85%를 모델이 정확히 예측함.
+
