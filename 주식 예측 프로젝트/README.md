@@ -26,9 +26,9 @@
 
 <br/>
 
-### 결측치 제거, 대처
+### 결측치
 ![image](https://github.com/YounseoKim62/Data-Analysis-Projects-KR/assets/161654460/a65cf719-490b-4cac-9156-f1c470eef5cd)
-![image](https://github.com/YounseoKim62/Data-Analysis-Projects-KR/assets/161654460/b9b73f4a-e3ad-4c76-b2f6-a2fbed49029a)
+![image](https://github.com/YounseoKim62/Data-Analysis-Projects-KR/assets/161654460/f3aafff6-2257-4dae-b435-530b780f1fdd)
 
 * 'Sector', 'Name', 'Class'를 제외하고 모든 변수들이 결측치를 가지고 있음
 * 결측치는 머신러닝 성능에 영향을 주기 때문에 추후에 결측치들을 대처 해야 함
@@ -66,4 +66,5 @@
 
 <br/>
 
-### 
+### 결측치 제거 및 대처
+
