@@ -22,7 +22,7 @@
 * 'Class'는 목적 변수임
 * 각 변수마다 NA 값들이 존재한다는 것을 확인할 수 있음
   * 몇몇 회사들 (ex. CBH)는 'Name', 'Sector', 'Class'를 제외하고는 아무 값도 입력이 되지 않았기에 후에 대처가 필요
-* 재무 지표에서 'OperatingProfitMargin'은 %형식으로 나와야 하지만 데이터셋에는 모두 1아니면 NA 값으로 표기되어 있기에 추후에 제거가 필요함
+* 재무 지표에서 'operatingProfitMargin'은 %형식으로 나와야 하지만 데이터셋에는 모두 1아니면 NA 값으로 표기되어 있기에 추후에 제거가 필요함
 
 <br/>
 
@@ -49,7 +49,8 @@
 ![image](https://github.com/YounseoKim62/Data-Analysis-Projects-KR/assets/161654460/4dd77144-c6f2-454b-b64e-f78deae63d28)
 ![image](https://github.com/YounseoKim62/Data-Analysis-Projects-KR/assets/161654460/443141fe-0878-4a3a-be38-9af2a73c396f)
 
-* 통계 요약표를 살펴보았을 때, 변수들 간의 최소값과 최대값이 크게 차이남을 확인할 수 있
+* 통계 요약표를 살펴보았을 때, 변수들 간의 최소값과 최대값이 크게 차이남을 확인할 수 있음
+* 또한 이상치들이 존재한다는것을 알 수 있음 
 * 첫 10개의 변수를 박스 플롯으로 시각화한 결과, 'Revenue Growth'나 'R&D Expenses'와 같은 변수들은 명확하게 나타나지 않
 * 이는 각 변수들의 범위가 다름을 의미하며, 추후 변수들의 표준화가 필요함
 
@@ -59,7 +60,7 @@
 ![image](https://github.com/YounseoKim62/Data-Analysis-Projects-KR/assets/161654460/4d3ebc99-688a-484e-a3c6-8b98bf4c47d8)
 ![image](https://github.com/YounseoKim62/Data-Analysis-Projects-KR/assets/161654460/770b4255-418d-4468-9706-f1123e21cb9a)
 
-* 목적변수와 상관계수가 낮은 설명변수들이 존재한다는 것을 알 수 있음
+* 목적변수와 상관계수가 지나치게 낮은 설명변수들이 존재한다는 것을 알 수 있음 (진한 파란색인 변수일 수록 목적변수와 상관관계가 없음
 * 목적변수와 상관계수가 낮은 설명변수들은 머신러닝 모델에 노이즈를 추가하여 성능 저하와 과접합을 초래할 수 있기 때문에 추후 조치가 필요함
 
 <br/>
@@ -75,4 +76,8 @@
 
 <br>
 
+![image](https://github.com/YounseoKim62/Data-Analysis-Projects-KR/assets/161654460/1f635aca-704e-4424-aa38-f0854d52dcab)
+![image](https://github.com/YounseoKim62/Data-Analysis-Projects-KR/assets/161654460/c94052c4-2827-40c0-9e7a-184e9d95a080)
 
+* 머신러닝에 필요하지 않은 'Name', 결측치가 50% 이상이였던 'operatingCycle', 'cashConversionCycle', shortTermCoverageRatios', 그리고 변수의 값들이 잘못 입력된 'operatingProfitMargin' 제거
+* 이상치들이 존제하기때문에 이상치들에게 민감하지 않은 중앙값을 사용하여 결측치들을 대처
