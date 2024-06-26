@@ -62,10 +62,17 @@
 * 목적변수와 상관계수가 낮은 설명변수들이 존재한다는 것을 알 수 있음
 * 목적변수와 상관계수가 낮은 설명변수들은 머신러닝 모델에 노이즈를 추가하여 성능 저하와 과접합을 초래할 수 있기 때문에 추후 조치가 필요함
 
+<br/>
 
 ## Step 2 (데이터 전처리)
 
 <br/>
 
 ### 결측치 제거 및 대처
+![image](https://github.com/YounseoKim62/Data-Analysis-Projects-KR/assets/161654460/c86e4f41-9cd9-4e0a-9d10-01ceefa617fd)
+
+* 'Name', 'Sector', 'Class'를 제외하고 모든 변수 값이 NA인 회사들을 제거
+
+<br>
+
 
