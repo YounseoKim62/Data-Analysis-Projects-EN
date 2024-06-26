@@ -15,7 +15,7 @@
 <br/>
 
 ### 데이터 확인
-![image](https://github.com/YounseoKim62/Data-Analysis-Projects-KR/assets/161654460/3d5d0db8-0e1a-41aa-b06d-036a0b5858dc)
+![image](https://github.com/YounseoKim62/Data-Analysis-Projects-KR/assets/161654460/68b44d07-3e9a-420d-81fa-4381f7d4ec93)
 
 * 'Name' 변수는 머신러닝 모델에서 중요한 역할을 하지 않음
 * 'Sector'는 유일한 범주형 변수이며, 나머지 변수들은 모두 숫자형 변수임
