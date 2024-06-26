@@ -36,48 +36,10 @@
 
 <br/>
 
-### 목적 변수의 대칭성
-![image](https://github.com/YounseoKim62/Data-Analysis-Projects-KR/assets/161654460/5093f1b9-01a4-4060-954e-c5d978c1015b)
-
-* 목적 변수의 값을 막대그래프로 나타내면, 사지 않는 것을 추천하는 값이 사는 것을 추천하는 값보다 2배 이상 많다는 것을 알 수 있음
-* 머신러닝 모델은 소수의 값을 무시하는 경향이 있기 때문에, 사지 않는 것을 추천하는 값 쪽으로 편향될 수 있
-* 따라서 추후에 목적 변수의 균형을 맞춰야 함을 알 수 있음
-
-<br/>
-
-### 통계 요약
-![image](https://github.com/YounseoKim62/Data-Analysis-Projects-KR/assets/161654460/4dd77144-c6f2-454b-b64e-f78deae63d28)
-![image](https://github.com/YounseoKim62/Data-Analysis-Projects-KR/assets/161654460/443141fe-0878-4a3a-be38-9af2a73c396f)
-
-* 통계 요약표를 살펴보았을 때, 변수들 간의 최소값과 최대값이 크게 차이남을 확인할 수 있음
-* 또한 이상치들이 존재한다는것을 알 수 있음 
-* 첫 10개의 변수를 박스 플롯으로 시각화한 결과, 'Revenue Growth'나 'R&D Expenses'와 같은 변수들은 명확하게 나타나지 않
-* 이는 각 변수들의 범위가 다름을 의미하며, 추후 변수들의 표준화가 필요함
-
-<br/>
-
 ### 목적변수와 설명변수의 상관관계
 ![image](https://github.com/YounseoKim62/Data-Analysis-Projects-KR/assets/161654460/4d3ebc99-688a-484e-a3c6-8b98bf4c47d8)
 ![image](https://github.com/YounseoKim62/Data-Analysis-Projects-KR/assets/161654460/770b4255-418d-4468-9706-f1123e21cb9a)
 
 * 목적변수와 상관계수가 지나치게 낮은 설명변수들이 존재한다는 것을 알 수 있음 (진한 파란색인 변수일 수록 목적변수와 상관관계가 없음
 * 목적변수와 상관계수가 낮은 설명변수들은 머신러닝 모델에 노이즈를 추가하여 성능 저하와 과접합을 초래할 수 있기 때문에 추후 조치가 필요함
-
-<br/>
-
-## Step 2 (데이터 전처리)
-
-<br/>
-
-### 결측치 제거 및 대처
-![image](https://github.com/YounseoKim62/Data-Analysis-Projects-KR/assets/161654460/c86e4f41-9cd9-4e0a-9d10-01ceefa617fd)
-
-* 'Name', 'Sector', 'Class'를 제외하고 모든 변수 값이 NA인 회사들을 제거
-
-<br>
-
-![image](https://github.com/YounseoKim62/Data-Analysis-Projects-KR/assets/161654460/1f635aca-704e-4424-aa38-f0854d52dcab)
-![image](https://github.com/YounseoKim62/Data-Analysis-Projects-KR/assets/161654460/c94052c4-2827-40c0-9e7a-184e9d95a080)
-
-* 머신러닝에 필요하지 않은 'Name', 결측치가 50% 이상이였던 'operatingCycle', 'cashConversionCycle', shortTermCoverageRatios', 그리고 변수의 값들이 잘못 입력된 'operatingProfitMargin' 제거
-* 이상치들이 존제하기때문에 이상치들에게 민감하지 않은 중앙값을 사용하여 결측치들을 대처
+화
