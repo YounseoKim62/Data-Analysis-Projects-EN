@@ -36,12 +36,11 @@
 
 <br/>
 
-### 목적변수와 설명변수의 상관관계
-![image](https://github.com/YounseoKim62/Data-Analysis-Projects-KR/assets/161654460/4d3ebc99-688a-484e-a3c6-8b98bf4c47d8)
-![image](https://github.com/YounseoKim62/Data-Analysis-Projects-KR/assets/161654460/770b4255-418d-4468-9706-f1123e21cb9a)
+### 목적변수의 불균형
+![image](https://github.com/YounseoKim62/Data-Analysis-Projects-KR/assets/161654460/f8be6cdd-1cc2-4419-bbe6-34b0c43dc703)
 
-* 목적변수와 상관계수가 지나치게 낮은 설명변수들이 존재한다는 것을 알 수 있음 (진한 파란색인 변수일 수록 목적변수와 상관관계가 없음
-* 목적변수와 상관계수가 낮은 설명변수들은 머신러닝 모델에 노이즈를 추가하여 성능 저하와 과접합을 초래할 수 있기 때문에 추후 조치가 필요함
+* 목적 변수의 불균형은 머신러닝 모델이 소수의 목적변수 값에 과적합되어 머신러닝 모델의 성능을 저하시킴
+* 이번 프로젝트에서는 목적변수의 분포에 상대적으로 덜 민감한 AUC-ROC를 사용하기 때문에 따로 전처리는 하지 않음
 
 <br/>
 
@@ -65,5 +64,6 @@
 
 ![image](https://github.com/YounseoKim62/Data-Analysis-Projects-KR/assets/161654460/d1c8eef4-4f57-4d74-a89b-0b461c056347)
 
+* KNN 알고리즘을 사용하여 결측치를 처리하기 위해서 범주형 변수인 'Sector'를 이진 벡터 형태로 변환
 * KNNImputer는 결측값의 5개의 최근접 이웃을 찾아 이웃들의 평균값으로 결측값을 대처함, 이를 통해 데이터의 패턴을 유지하며 결측값의 처리가 가능함
-* 
+
