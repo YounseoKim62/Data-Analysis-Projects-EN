@@ -42,4 +42,28 @@
 
 * 목적변수와 상관계수가 지나치게 낮은 설명변수들이 존재한다는 것을 알 수 있음 (진한 파란색인 변수일 수록 목적변수와 상관관계가 없음
 * 목적변수와 상관계수가 낮은 설명변수들은 머신러닝 모델에 노이즈를 추가하여 성능 저하와 과접합을 초래할 수 있기 때문에 추후 조치가 필요함
-화
+
+<br/>
+
+## Step 2 (데이터 전처리)
+
+<br/>
+
+### 결측치 제거 및 처리
+![image](https://github.com/YounseoKim62/Data-Analysis-Projects-KR/assets/161654460/83a39fcb-fa34-427f-9fc2-b3f7834d5055)
+![image](https://github.com/YounseoKim62/Data-Analysis-Projects-KR/assets/161654460/00b1ea7f-bb33-4c6c-9ba0-1c35f0fb4bbe)
+
+* 위와 같이 'Name', 'Sector', 'Class'를 제외한 모든 변수에 NA값이 있는 221개의 기업들을 제거
+
+<br/>
+
+![image](https://github.com/YounseoKim62/Data-Analysis-Projects-KR/assets/161654460/a33622e1-f7b1-4877-a9a2-ddfc838fc374)
+
+* 변수의 결측치가 50%이상인 'operatingCycle', 'cashConversionCycle', 'shortTermCoverageRatios'와 변수의 값이 잘못 입력된것으로 추정되는 'operatingProfitMargin'을 제거
+
+<br/>
+
+![image](https://github.com/YounseoKim62/Data-Analysis-Projects-KR/assets/161654460/d1c8eef4-4f57-4d74-a89b-0b461c056347)
+
+* KNNImputer는 결측값의 5개의 최근접 이웃을 찾아 이웃들의 평균값으로 결측값을 대처함, 이를 통해 데이터의 패턴을 유지하며 결측값의 처리가 가능함
+* 
