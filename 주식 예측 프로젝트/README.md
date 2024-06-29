@@ -73,7 +73,7 @@
 
 <br/>
 
-![image](https://github.com/YounseoKim62/Data-Analysis-Projects-KR/assets/161654460/137e8a28-2149-4fb6-aa41-ae32f4fd76e1)
+![image](https://github.com/YounseoKim62/Data-Analysis-Projects-KR/assets/161654460/e081f6ba-b32f-4b59-8e8c-84e869632413)
 
 * KNNImputer는 결측값의 5개의 최근접 이웃을 찾아 이웃들의 평균값으로 결측값을 대처함, 이를 통해 데이터의 패턴을 유지하며 결측값의 처리가 가능함
 
@@ -87,4 +87,6 @@
 <br/>
 
 ### 데이터 분할
+![image](https://github.com/YounseoKim62/Data-Analysis-Projects-KR/assets/161654460/0f192f61-8839-44bf-bc45-b4afda8b84ad)
 
+* 머신러닝 학습을 위해 학습 데이터셋을 설명변수만 있는 X_train 데이터 셋과 독립변수만 있는 y_train 데이터 셋으로 분할
