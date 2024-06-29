@@ -26,10 +26,14 @@
 
 <br/>
 
+### 통계 요약
+![image](https://github.com/YounseoKim62/Data-Analysis-Projects-KR/assets/161654460/db206e4b-8723-4b6f-a7b1-ddae62337c4f)
+
+* 통계 요약 표와 박스 플롯을 보면 변수마다 값의 기준이 매우 크게 차이 난다는 것을 알 수 있으므로 추후에 대처가 필요
+
 ### 결측치
 ![image](https://github.com/YounseoKim62/Data-Analysis-Projects-KR/assets/161654460/a65cf719-490b-4cac-9156-f1c470eef5cd)
 ![image](https://github.com/YounseoKim62/Data-Analysis-Projects-KR/assets/161654460/13f15b3d-d5cf-4e36-b4b0-c1e2545e4f8f)
-
 
 * 'Sector', 'Name', 'Class'를 제외하고 모든 변수들이 결측치를 가지고 있음
 * 결측치는 머신러닝 성능에 영향을 주기 때문에 추후에 결측치들을 대처 해야 함
@@ -62,8 +66,24 @@
 
 <br/>
 
-![image](https://github.com/YounseoKim62/Data-Analysis-Projects-KR/assets/161654460/d1c8eef4-4f57-4d74-a89b-0b461c056347)
+![image](https://github.com/YounseoKim62/Data-Analysis-Projects-KR/assets/161654460/793613e2-b023-453c-8cde-e435a5dc379d)
 
 * KNN 알고리즘을 사용하여 결측치를 처리하기 위해서 범주형 변수인 'Sector'를 이진 벡터 형태로 변환
+* 또한 머신러닝을 사용하기 위해서는 범주형 변수를 이진 벡터 형태로 변환해야함
+
+<br/>
+![image](https://github.com/YounseoKim62/Data-Analysis-Projects-KR/assets/161654460/4aad3ffc-2d82-4b8f-a86b-3da9810366d2)
+
 * KNNImputer는 결측값의 5개의 최근접 이웃을 찾아 이웃들의 평균값으로 결측값을 대처함, 이를 통해 데이터의 패턴을 유지하며 결측값의 처리가 가능함
+
+<br/>
+
+### 데이터 표준화
+![image](https://github.com/YounseoKim62/Data-Analysis-Projects-KR/assets/161654460/af5f10ff-e88e-4d39-83f7-5dc1d196340a)
+
+* 추후에 결정 트리 기반 모델을 사용 할 것이기 때문에 표준화가 필수는 아니지만, 변수가 굉장히 많고 변수마다 값의 기준이 너무 크게 차이가 나기 때문에 표준화를 하여 모델의 안정성을 향상함 
+
+<br/>
+
+### 데이터 분할
 
