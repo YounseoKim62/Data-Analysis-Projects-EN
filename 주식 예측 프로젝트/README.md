@@ -10,11 +10,11 @@
 
 <br/>
 
-## Step 1 (EDA)
+## Step 1: EDA
 
 <br/>
 
-### 데이터 확인
+### [데이터 확인]
 ![image](https://github.com/YounseoKim62/Data-Analysis-Projects-KR/assets/161654460/68b44d07-3e9a-420d-81fa-4381f7d4ec93)
 
 * 'Name' 변수는 머신러닝 모델에서 중요한 역할을 하지 않음
@@ -26,12 +26,14 @@
 
 <br/>
 
-### 통계 요약
+### [통계 요약]
 ![image](https://github.com/YounseoKim62/Data-Analysis-Projects-KR/assets/161654460/db206e4b-8723-4b6f-a7b1-ddae62337c4f)
 
 * 통계 요약 표와 박스 플롯을 보면 변수마다 값의 기준이 매우 크게 차이 난다는 것을 알 수 있으므로 추후에 대처가 필요
 
-### 결측치
+<br/>
+
+### [결측치]
 ![image](https://github.com/YounseoKim62/Data-Analysis-Projects-KR/assets/161654460/a65cf719-490b-4cac-9156-f1c470eef5cd)
 ![image](https://github.com/YounseoKim62/Data-Analysis-Projects-KR/assets/161654460/13f15b3d-d5cf-4e36-b4b0-c1e2545e4f8f)
 
@@ -40,7 +42,7 @@
 
 <br/>
 
-### 목적변수의 불균형
+### [목적변수의 불균형]
 ![image](https://github.com/YounseoKim62/Data-Analysis-Projects-KR/assets/161654460/f8be6cdd-1cc2-4419-bbe6-34b0c43dc703)
 
 * 목적 변수의 불균형은 머신러닝 모델이 소수의 목적변수 값에 과적합되어 머신러닝 모델의 성능을 저하시킴
@@ -48,11 +50,11 @@
 
 <br/>
 
-## Step 2 (데이터 전처리)
+## Step 2: 데이터 전처리
 
 <br/>
 
-### 결측치 제거 및 처리
+### [결측치 제거 및 처리]
 ![image](https://github.com/YounseoKim62/Data-Analysis-Projects-KR/assets/161654460/83a39fcb-fa34-427f-9fc2-b3f7834d5055)
 ![image](https://github.com/YounseoKim62/Data-Analysis-Projects-KR/assets/161654460/00b1ea7f-bb33-4c6c-9ba0-1c35f0fb4bbe)
 
@@ -79,21 +81,21 @@
 
 <br/>
 
-### 데이터 표준화
+### [데이터 표준화]
 ![image](https://github.com/YounseoKim62/Data-Analysis-Projects-KR/assets/161654460/af5f10ff-e88e-4d39-83f7-5dc1d196340a)
 
 * 추후에 결정 트리 기반 모델을 사용 할 것이기 때문에 표준화가 필수는 아니지만, 변수가 굉장히 많고 변수마다 값의 기준이 너무 크게 차이가 나기 때문에 표준화를 하여 모델의 안정성을 향상함 
 
 <br/>
 
-### 데이터 분할
+### [데이터 분할]
 ![image](https://github.com/YounseoKim62/Data-Analysis-Projects-KR/assets/161654460/0f192f61-8839-44bf-bc45-b4afda8b84ad)
 
 * 머신러닝 학습을 위해 학습 데이터셋을 설명변수만 있는 X_train 데이터 셋과 독립변수만 있는 y_train 데이터 셋으로 분할
 
 <br/>
 
-### 변수 선택
+### [변수 선택]
 ![image](https://github.com/YounseoKim62/Data-Analysis-Projects-KR/assets/161654460/28708656-2e68-4d30-8fb5-4b2b07812464)
 ![Group 14](https://github.com/YounseoKim62/Data-Analysis-Projects-KR/assets/161654460/07b842bc-f172-48ab-adb9-8f1afcc83eff)
 
@@ -101,11 +103,11 @@
 
 <br/>
 
-## Step 3 (머신러닝: XGBoost)
+## Step 3: 머신러닝 (XGBoost)
 
 <br/>
 
-### 하이퍼파라미터 튜닝
+### [하이퍼파라미터 튜닝]
 ![image](https://github.com/YounseoKim62/Data-Analysis-Projects-KR/assets/161654460/a66c0583-a6ff-47eb-9cf8-86d54605e7dc)
 
 * XGBoost의 파라미터들을 여러 값으로 설정:
@@ -116,14 +118,14 @@
 
 <br/>
 
-### 예측
+### [예측]
 ![image](https://github.com/YounseoKim62/Data-Analysis-Projects-KR/assets/161654460/a39e6e91-d4eb-4de9-a73c-b7460064ec9e)
 
 * roc_auc 점수가 가장 높게 나온 파라미터 조합을 사용하여 테스트 데이터 셋의 결과 값을 예측
 
 <br/>
 
-### 점수 (ROC AUC)
+### [점수 (ROC AUC)]
 ![image](https://github.com/YounseoKim62/Data-Analysis-Projects-KR/assets/161654460/a47bb48e-4799-4151-9d1a-ba950a94ec12)
 
 * ROC AUC의 값이 0.61로 이는 모델이 실제로 주가가 오른 기업의 61%의 확률로 올바르게 예측하고, 39%의 확률로 잘못 예측한다는 것을 알 수 있음
