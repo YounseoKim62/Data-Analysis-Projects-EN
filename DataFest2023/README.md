@@ -11,7 +11,7 @@
 
 <br/>
 
-## Step 1 (의뢰인의 무료 법률 서비스 자격 판별)
+## Step 1: 의뢰인의 무료 법률 서비스 자격 판별
 
 <br/>
 
@@ -53,7 +53,7 @@
 
 <br/> 
 
-## Step 2 (효율적인 변호사와 의뢰인 매칭)
+## Step 2: 효율적인 변호사와 의뢰인 매칭
 
 <br/> 
 
@@ -88,11 +88,11 @@
 
 <br/> 
 
-## Step 3 (미국 내 법률 상담 트렌드 분석)
+## Step 3: 미국 내 법률 상담 트렌드 분석
 
 <br/> 
 
-### 가장 많이 상담된 법률 카테고리
+### [가장 많이 상담된 법률 카테고리]
 ![image](https://github.com/YounseoKim62/Data-Analysis-Projects-KR/assets/161654460/75161971-a632-4db0-b4d0-60bf2c085f4e)
 
 * 주 별로 미국 변호사 협회의 무료 법률 상담 서비스에서 가장 많이 상담된 카테고리는 **가족 및 아동(Family and Children)** 으로 나타남
@@ -100,7 +100,7 @@
 
 <br/> 
 
-### 두번째로 많이 상담된 법률 카테고리
+### [두번째로 많이 상담된 법률 카테고리]
 ![image](https://github.com/YounseoKim62/Data-Analysis-Projects-KR/assets/161654460/88b2c294-08f8-4a43-b915-c1bfb03b289d)
 
 * 주 별로 미국 변호사 협회의 무료 법률 상담 서비스에서 두번째로 많이 상담된 카테고리는 **기타(Others)** 로 나타남
@@ -108,7 +108,7 @@
 
 <br/> 
 
-### 세번째로 많이 상담된 법률 카테고리
+### [세번째로 많이 상담된 법률 카테고리]
 ![image](https://github.com/YounseoKim62/Data-Analysis-Projects-KR/assets/161654460/b1cecf1d-22f5-412c-a98d-13561b8622b8)
 
 * 주 별로 미국 변호사 협회의 무료 법률 상담 서비스에서 세번째로 많이 상담된 카테고리는 **주거 및 노숙자(Housing and Homelessness)** 로 나타남
@@ -116,7 +116,7 @@
 
 <br/> 
 
-### 시간에 따른 법률 상담 카테고리별 추이 
+### [시간에 따른 법률 상담 카테고리별 추이]
 ![trend graph](https://github.com/YounseoKim62/Data-Analysis-Projects-KR/assets/161654460/0edbeab7-12d9-4c7e-a84d-0b0a1442211f)
 
 * 2020년도 초반부터 가족 및 아동, 기타 (상해, 자연재해, 이민, 세금과 관련된 상담), 주거 및 노숙자, 노동, 고용 및 실업에 관련 법률 상담의 급격한 증가가 관찰됨
@@ -127,11 +127,11 @@
 
 <br/> 
 
-## Step 4 (실제 적용 프로토타입)
+## Step 4: 실제 적용 프로토타입
 
 <br/> 
 
-### 의뢰인의 무료 법률 서비스 자격 판별, 효율적인 변호사와 의뢰인 매칭
+### [의뢰인의 무료 법률 서비스 자격 판별, 효율적인 변호사와 의뢰인 매칭]
 ![image](https://github.com/YounseoKim62/Data-Analysis-Projects-KR/assets/161654460/c778e406-18a9-4b4f-9fea-8dbef37a751c)
 
 ![image](https://github.com/YounseoKim62/Data-Analysis-Projects-KR/assets/161654460/9b29b63d-813d-446a-ab85-0e87abcad67a)
@@ -141,7 +141,7 @@
 
 <br/> 
 
-### 미국 내 법률 상담 트렌드 분석
+### [미국 내 법률 상담 트렌드 분석]
 
 <br/> 
 
