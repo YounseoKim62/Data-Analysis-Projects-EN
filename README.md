@@ -120,7 +120,7 @@
 
 **작성자**: Younseo Kim, Logan Cuff  
 **기간**: 2009-2019  
-**프로그래밍 언어 및 도구**: R (tidyverse, ANOVA)
+**프로그래밍 언어 및 도구**: R (tidyverse, ANOVA) <br/>
 **활용한 기술**: EDA, 데이터 전처리, ANOVA 분석  
 
 #### 프로젝트 소개
