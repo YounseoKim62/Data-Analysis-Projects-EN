@@ -10,11 +10,11 @@
 
 <br/>
 
-## Step 1 (데이터 전처리)
+## Step 1: 데이터 전처리
 
 <br/>
 
-### 소문자 변경과 특수문자 제거
+### [소문자 변경과 특수문자 제거]
 ![image](https://github.com/YounseoKim62/Data-Analysis-Projects-KR/assets/161654460/e2cde325-479a-4aa1-a969-a9c666cb9a21)
 
 * 대문자와 소문자가 섞여 있으면 같은 단어를 다르게 인식할 수 있기 때문에, 'The', 'the'와 같은 단어들을 소문자로 통일하여 동일하게 인식하도록 함
@@ -22,7 +22,7 @@
 
 <br/>
 
-### 불용어 (stop words)제거
+### [불용어 (stop words)제거]
 ![image](https://github.com/YounseoKim62/Data-Analysis-Projects-KR/assets/161654460/ecb835d1-596a-4bca-afab-364a5c8d9d3a)
 
 * 불용어는 의미 있는 정보를 제공하지 않기 때문에 제거
@@ -30,7 +30,7 @@
 
 <br/>
 
-### 표제화 (lemmatization)
+### [표제화 (lemmatization)]
 ![image](https://github.com/YounseoKim62/Data-Analysis-Projects-KR/assets/161654460/602f1bc9-3d0c-4390-b140-d97e8cb41e66)
 
 * 환자가 호소하는 증상, 치료받은 기록과 같은 행동에 관련된 텍스트 데이터이기 때문에 동사 형태로 표제화 함
@@ -38,7 +38,7 @@
 
 <br/>
 
-### 벡터라이징 (TF-IDF)
+### [벡터라이징 (TF-IDF)]
 ![image](https://github.com/YounseoKim62/Data-Analysis-Projects-KR/assets/161654460/96e79673-224e-4747-8648-070e4973d3bd)
 
 * TF-IDF는 텍스트를 토크나이징한 후, 단어의 중요도를 평가하여 문서 내에서의 중요도를 계산하고 이를 벡터로 변환
@@ -46,11 +46,11 @@
 
 <br/>
 
-## Step 2 (머신러닝: stacking algorithm)
+## Step 2: 머신러닝 (Stacking Algorithm)
 
 <br/>
 
-### stacking algorithm 모델 생성
+### [Stacking Algorithm 모델 생성]
 ![image](https://github.com/YounseoKim62/Data-Analysis-Projects-KR/assets/161654460/0f706a78-83f2-4e05-a41c-1c091b13006f)
 
 * 텍스트 데이터는 단어의 순서, 의미, 문맥 등을 고려해야 하므로 여러 모델의 강점을 결합하여 예측 정확성을 높일 수 있는 스태킹 알고리즘을 사용
@@ -59,7 +59,7 @@
 
 <br/>
 
-### 하이퍼파라미터 튜닝
+### [하이퍼파라미터 튜닝]
 ![image](https://github.com/YounseoKim62/Data-Analysis-Projects-KR/assets/161654460/36c1f4cc-7a64-496c-8b13-b884705f2966)
 
 * 스태킹 알고리즘에 사용된 로지스틱 회귀와 XGBoost의 파라미터들을 여러 값으로 설정:
@@ -71,14 +71,14 @@
 
 <br/>
 
-### 예측
+### [예측]
 ![image](https://github.com/YounseoKim62/Data-Analysis-Projects-KR/assets/161654460/571ce30f-672d-47f8-a303-129db0c503c3)
 
 * f1_weighted 점수가 가장 높게 나온 파라미터 조합을 사용하여 테스트 데이터 셋의 결과값을 예측
 
 <br/>
 
-### 점수 (mean F-1 score)
+### [점수 (Mean F-1 Score)]
 ![image](https://github.com/YounseoKim62/Data-Analysis-Projects-KR/assets/161654460/d3c79428-4cdb-4e0b-968d-a0921437d019)
 
 * Mean F-1 score의 값이 0.85로 이는 모델이 높은 정밀도 (모델이 True로 분류한 사례 중 85%가 실제로 True임)와 높은 재현율 (실제 True로 분류한 사례 중 85%를 모델이 예측함)을 구현
