@@ -99,7 +99,7 @@
 
 ### [변수 선택]
 ![image](https://github.com/YounseoKim62/Data-Analysis-Projects-KR/assets/161654460/28708656-2e68-4d30-8fb5-4b2b07812464)
-![Group 14](https://github.com/YounseoKim62/Data-Analysis-Projects-KR/assets/161654460/07b842bc-f172-48ab-adb9-8f1afcc83eff)
+![Group 15](https://github.com/YounseoKim62/Data-Analysis-Projects-KR/assets/161654460/3ba2b2d0-0b46-4379-8b9c-37df59a946ac)
 
 * 하이퍼파라미터 튜닝이 되지 않은 XGBoost 모델에 전처리가 완료된 데이터셋을 학습시킨 후, Gini feature importance 플롯을 생성하여 Gini 점수가 1.5 이하인 특징들을 제거하여 모델 성능을 최적화함
 
