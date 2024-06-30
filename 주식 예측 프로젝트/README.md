@@ -95,6 +95,37 @@
 
 ### 변수 선택
 ![image](https://github.com/YounseoKim62/Data-Analysis-Projects-KR/assets/161654460/28708656-2e68-4d30-8fb5-4b2b07812464)
+![Group 14](https://github.com/YounseoKim62/Data-Analysis-Projects-KR/assets/161654460/07b842bc-f172-48ab-adb9-8f1afcc83eff)
 
-![image](https://github.com/YounseoKim62/Data-Analysis-Projects-KR/assets/161654460/f34a28b4-ad7f-4fed-be0b-dc69eec2c20f)
+* 하이퍼 파라미터 튜닝이 되지않은 XGBoost모델에 전처리가 완료된 데이터 셋을 학습시킨 후, gini feature importance 플롯을 생성하여 gini 점수가 1.5 이하인 특징들을 제거하여 모델 성능을 최적화
 
+<br/>
+
+## Step 3 (머신러닝: XGBoost)
+
+<br/>
+
+### 하이퍼파라미터 튜닝
+![image](https://github.com/YounseoKim62/Data-Analysis-Projects-KR/assets/161654460/a66c0583-a6ff-47eb-9cf8-86d54605e7dc)
+
+* XGBoost의 파라미터들을 여러 값으로 설정:
+ * learning_rate: 모델 가중치를 업데이트하는 스텝 크기; 큰 값은 빠르게 학습하지만 덜 세밀함
+ * max_depth: 모델의 복잡성을 증가시켜 더 세밀한 패턴을 학습 가능
+ * n_estimators: 앙상블의 트리 수; 각 트리는 이전 트리의 오류를 수정
+* GridSearchCV를 통해 모든 조합을 테스트하여 가장 높은 roc_auc 점수가 나온 파라미터 조합을 저장 
+
+<br/>
+
+### 예측
+![image](https://github.com/YounseoKim62/Data-Analysis-Projects-KR/assets/161654460/a39e6e91-d4eb-4de9-a73c-b7460064ec9e)
+
+* roc_auc 점수가 가장 높게 나온 파라미터 조합을 사용하여 테스트 데이터 셋의 결과 값을 예측
+
+<br/>
+
+### 점수 (ROC AUC)
+![image](https://github.com/YounseoKim62/Data-Analysis-Projects-KR/assets/161654460/a47bb48e-4799-4151-9d1a-ba950a94ec12)
+
+* ROC AUC의 값이 0.61로 이는 모델이 실제로 주가가 오른 기업의 61%의 확률로 올바르게 예측하고, 39%의 확률로 잘못 예측한다는 것을 알 수 있음
+* 모델이 무작위 예측보다는 약간 더 나은 성능을 보이지만 실제 거래에서 사용할 만큼 좋은 성능은 아닌듯함
+* 투자자들의 심리, 시장의 변동성, 예기치 않은 사건 등이 주가에 큰 영향을 미치기 때문에 단순한 수학적 모델링 만으로는 주가의 횡보를 예측하기 어려움
