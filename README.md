@@ -38,6 +38,7 @@
 - 결측치 처리 방법으로 mean이나 median 외에도 다양한 방법이 있음을 알게 됨
 - 변수가 많고 각 변수의 값 스케일이 크게 다를 경우, 표준화 또는 정규화가 필요함 (단, 사용하는 머신러닝 알고리즘에 따라 표준화나 정규화 중 하나만 선택하여 시행)
 
+#### [주식 예측 프로젝트 리포트](https://github.com/YounseoKim62/Data-Analysis-Projects-KR/blob/84b5bbaf73199e68016e730f3e19fe3fb3f866ec/%EC%A3%BC%EC%8B%9D%20%EC%98%88%EC%B8%A1%20%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8/%EC%A3%BC%EC%8B%9D%20%EC%98%88%EC%B8%A1%20%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8.pdf)
 ---
 
 ### 텍스트 분류 프로젝트 요약
