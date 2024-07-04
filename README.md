@@ -161,4 +161,6 @@
 - **한계**: Random Effect 부재, 두 팀만 선택, Confounding 변수 통제 부족
 - **향후 연구**: Random Effect 추가, 더 많은 팀과 시즌 분석, Confounding 변수 통제 방법 모색
 
-#### [Performance of Arsenal and Tottenham Against Big 6 Clubs: A Goals-Based Analysis](https://github.com/YounseoKim62/Data-Analysis-Projects-KR/blob/451f0a247dd87e547d319b8b9ba65fc7647432fe/Performance-of-Arsenal-and-Tottenham-Against-Big-6-Clubs-A.pdf)
+#### [Performance of Arsenal and Tottenham Against Big 6 Clubs: A Goals-Based Analysis](https://github.com/YounseoKim62/Data-Analysis-Projects-KR/blob/dfb876146a143cdb8658730f4d7afe68315a7793/Performance%20of%20Arsenal%20and%20Tottenham%20Against%20Big%206%20Clubs%3A%20A%20Goals-Based%20Analysis%20(2009-2019)/Performance-of-Arsenal-and-Tottenham-Against-Big-6-Clubs-A.pdf)
+
+
