@@ -38,7 +38,7 @@
 - 결측치 처리 방법으로 mean이나 median 외에도 다양한 방법이 있음을 알게 됨
 - 변수가 많고 각 변수의 값 스케일이 크게 다를 경우, 표준화 또는 정규화가 필요함 (단, 사용하는 머신러닝 알고리즘에 따라 표준화나 정규화 중 하나만 선택하여 시행)
 
-[주식 예측 프로젝트 리포트](https://github.com/YounseoKim62/Data-Analysis-Projects-KR/blob/84b5bbaf73199e68016e730f3e19fe3fb3f866ec/%EC%A3%BC%EC%8B%9D%20%EC%98%88%EC%B8%A1%20%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8/%EC%A3%BC%EC%8B%9D%20%EC%98%88%EC%B8%A1%20%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8.pdf)
+#### [주식 예측 프로젝트 리포트](https://github.com/YounseoKim62/Data-Analysis-Projects-KR/blob/84b5bbaf73199e68016e730f3e19fe3fb3f866ec/%EC%A3%BC%EC%8B%9D%20%EC%98%88%EC%B8%A1%20%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8/%EC%A3%BC%EC%8B%9D%20%EC%98%88%EC%B8%A1%20%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8.pdf)
 ---
 
 ### 텍스트 분류 프로젝트 요약
@@ -72,7 +72,7 @@
 - 텍스트 데이터의 형태(어떻게 텍스트가 저장되어 있는지)에 따라 전처리 과정이 달라질 수 있음을 깨달
 - 복잡한 텍스트 데이터를 분류하기 위해 앙상블 기법인 Stacking Algorithm을 사용해볼 수 있었음
 
-[텍스트 분류 프로젝트 리포트](https://github.com/YounseoKim62/Data-Analysis-Projects-KR/blob/451f0a247dd87e547d319b8b9ba65fc7647432fe/%ED%85%8D%EC%8A%A4%ED%8A%B8%20%EB%B6%84%EB%A5%98%20%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8/%ED%85%8D%EC%8A%A4%ED%8A%B8%20%EB%B6%84%EB%A5%98%20%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8.pdf)
+#### [텍스트 분류 프로젝트 리포트](https://github.com/YounseoKim62/Data-Analysis-Projects-KR/blob/451f0a247dd87e547d319b8b9ba65fc7647432fe/%ED%85%8D%EC%8A%A4%ED%8A%B8%20%EB%B6%84%EB%A5%98%20%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8/%ED%85%8D%EC%8A%A4%ED%8A%B8%20%EB%B6%84%EB%A5%98%20%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8.pdf)
 ---
 
 ### DataFest (데이터 경진 대회) 2023 요약
@@ -116,7 +116,7 @@
 - 데이터를 어떻게 해석하고, 이를 시각화나 머신러닝을 통해 의미 있는 인사이트로 도출할 것인지가 데이터 분석의 핵심 포인트
 - 팀원들과 협업하며 다양한 의견을 존중하고 경청하며, 비판을 수용했을 때 더 좋은 결과로 이어질 수 있다는 것을 깨달음
 
-[DataFest2023 리포트](https://github.com/YounseoKim62/Data-Analysis-Projects-KR/blob/451f0a247dd87e547d319b8b9ba65fc7647432fe/DataFest2023/DataFest2023.pdf)
+#### [DataFest2023 리포트](https://github.com/YounseoKim62/Data-Analysis-Projects-KR/blob/451f0a247dd87e547d319b8b9ba65fc7647432fe/DataFest2023/DataFest2023.pdf)
 ---
 
 ### Performance of Arsenal and Tottenham Against Big 6 Clubs: A Goals-Based Analysis (2009-2019)
@@ -161,4 +161,4 @@
 - **한계**: Random Effect 부재, 두 팀만 선택, Confounding 변수 통제 부족
 - **향후 연구**: Random Effect 추가, 더 많은 팀과 시즌 분석, Confounding 변수 통제 방법 모색
 
-[Performance of Arsenal and Tottenham Against Big 6 Clubs: A Goals-Based Analysis](https://github.com/YounseoKim62/Data-Analysis-Projects-KR/blob/451f0a247dd87e547d319b8b9ba65fc7647432fe/Performance-of-Arsenal-and-Tottenham-Against-Big-6-Clubs-A.pdf)
+#### [Performance of Arsenal and Tottenham Against Big 6 Clubs: A Goals-Based Analysis](https://github.com/YounseoKim62/Data-Analysis-Projects-KR/blob/451f0a247dd87e547d319b8b9ba65fc7647432fe/Performance-of-Arsenal-and-Tottenham-Against-Big-6-Clubs-A.pdf)
