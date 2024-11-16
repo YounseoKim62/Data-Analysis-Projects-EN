@@ -39,7 +39,7 @@ This is the project portfolio of **Younseo Kim**, who dreams of becoming a data 
 - Learned that there are various methods for handling missing values beyond mean or median imputation
 - Recognized the need for standardization or normalization when dealing with many variables with significantly different scales (however, depending on the machine learning algorithm used, choose either standardization or normalization)
 
-#### [Stock Prediction Project Report](https://github.com/YounseoKim62/Data-Analysis-Projects-KR/blob/84b5bbaf73199e68016e730f3e19fe3fb3f866ec/%EC%A3%BC%EC%8B%9D%20%EC%98%88%EC%B8%A1%20%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8/%EC%A3%BC%EC%8B%9D%20%EC%98%88%EC%B8%A1%20%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8.pdf)
+#### [Stock Prediction Project Report](https://github.com/YounseoKim62/Data-Analysis-Projects-EN/blob/7f2e4aade66733d2c93859fe0f26228c1051390e/Stock%20Prediction%20Project/stock_prediction.md)
 ---
 
 ### Text Classification Project Summary
