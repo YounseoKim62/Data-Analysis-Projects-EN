@@ -1,148 +1,148 @@
-# The American Statistical Association DataFest - 최우수상 수상 (2023)
+# The American Statistical Association DataFest - Best in Show Award (2023)
 * Team Megabyte (Younseo Kim, Yong Jun Choi, Woosung Lim, Hyeongkwon Kim & Taehwan Lee)
 * 2023.03.25 ~ 2023.03.26
-* 프로그래밍 언어 및 도구: R (tidyverse, dplyr, ggplot2), Tableau, Excel, Figma
-* 활용한 기술: EDA, 데이터 전처리, 알고리즘 개발, 프로토타입 UI/UX 디자인
+* Programming Languages and Tools: R (tidyverse, dplyr, ggplot2), Tableau, Excel, Figma
+* Technologies Used: EDA, Data Preprocessing, Algorithm Development, Prototype UI/UX Design
 
 <br/>
 
-## [프로젝트 소개]
-* 미국 변호사 협회에서 제공한 50만 건 이상의 의뢰인 데이터, 2만 명의 변호사 데이터, 30만 건 이상의 상담 데이터를 활용하여 협회의 무료 법률 지원 상담 서비스의 효율성을 개선한 프로젝트
+## [Project Introduction]
+* A project that improved the efficiency of the association's free legal aid consultation services by utilizing over 500,000 client records, 20,000 lawyer records, and over 300,000 consultation records provided by the American Bar Association.
 
 <br/>
 
-## Step 1: 의뢰인의 무료 법률 서비스 자격 판별
+## Step 1: Determining Client Eligibility for Free Legal Services
 
 <br/>
 
-### [문제점] 
+### [Problem]
 ![image](https://github.com/YounseoKim62/Data-Analysis-Projects-KR/assets/161654460/0a999767-1408-43e4-9921-9e934a314d7a)
 
-* 주 마다 무료 법률 서비스 기준이 상이합니다.
-* 무료 법률 서비스를 받기 위해서는 자산과 수입 두 가지 기준을 모두 충족해야 하며, 관련 변수들이 나뉘어져 있어 변호사들이 의뢰인이 무료 법률 서비스 기준에 부합하는지 한눈에 판단하기 어렵습니다.
+* The criteria for free legal services differ by state.
+* To receive free legal services, clients must meet both asset and income criteria, and related variables are separated, making it difficult for lawyers to quickly determine whether a client meets the eligibility criteria.
 
 <br/>
 
-### [데이터 전처리]
+### [Data Preprocessing]
 ![image](https://github.com/YounseoKim62/Data-Analysis-Projects-KR/assets/161654460/8f389c0d-3dc0-4e4a-b14c-e733799a2cd8)
 
 ![image](https://github.com/YounseoKim62/Data-Analysis-Projects-KR/assets/161654460/0cd50bdb-bcd6-4a71-abc9-af242cb1e94a)
 
-1. 'clients' 데이터셋에서 AnnualIncome (수입 변수)이 NULL인 경우, 자산 관련 변수들도 모두 NULL이므로 **AnnualIncome이 NULL인 의뢰인들을 제거**합니다.
-2. 'clients' 데이터셋의 자산과 수입에 관련된 변수들이 Categorical Variable (범주형 변수)로 저장되어 있어 **Numeric Variable (숫자형 변수)로 변환**합니다.
-3. 'clients' 데이터셋의 StateAbbr 변수를 통해 'statesites' (주별 무료 법률 서비스 기준 데이터셋)과 **LEFT JOIN하여 통합된 데이터셋을 생성**합니다.
-4. *(대회 진행요원이 자산과 관련된 변수들에서 의뢰인들이 0을 적는 대신 기입을 하지 않은 경우가 많다고 하여, 자산과 관련된 변수들 중 1개 이상 기입한 의뢰인들에 한해서는 NULL 값을 0으로 간주합니다)* <br/> 'clients' 데이터셋의 자산과 관련된 변수들을 하나의 변수로 통합한 **sum_assets 파생변수를 생성**합니다.
+1. In the 'clients' dataset, when 'AnnualIncome' (income variable) is NULL, the asset-related variables are also all NULL, so **we remove clients whose 'AnnualIncome' is NULL**.
+2. The variables related to assets and income in the 'clients' dataset are stored as categorical variables, so we **convert them to numeric variables**.
+3. Using the 'StateAbbr' variable in the 'clients' dataset, we **LEFT JOIN** with the 'statesites' (dataset containing state-specific free legal service criteria) to create a unified dataset.
+4. *(Since the competition organizers mentioned that clients often did not fill in asset-related variables instead of entering 0, we consider NULL values as 0 only for clients who have filled in at least one asset-related variable)* <br/> We create a **'sum_assets' derived variable** that combines the asset-related variables in the 'clients' dataset into one variable.
 
 <br/> 
 
-### [알고리즘 개발]
+### [Algorithm Development]
 ![image](https://github.com/YounseoKim62/Data-Analysis-Projects-KR/assets/161654460/64cb43c4-19ac-4c9f-9607-6429093e605b)
 
-1. 수입 기준:
-   * AnnualIncome이 AllowedIncome보다 낮으면 ProBono_income을 'Y', 높으면 'N'으로 저장합니다.
+1. **Income Criteria**:
+   * If 'AnnualIncome' is less than 'AllowedIncome', we store 'ProBono_income' as 'Y'; if higher, as 'N'.
 
-2. 자산 기준:
-   * 'statesites' (주별 무료 법률 기준 데이터셋)에 없는 주 출신의 경우 ProBono_assets를 'NAA (No Allowed Assets)'로 저장합니다.
-   * 자산 관련 변수들이 모두 NULL이면 ProBono_assets를 'NC (Not Classified)'로 저장합니다.
-   * sum_assets가 AllowedAssets보다 낮으면 ProBono_assets를 'Y', 높으면 'N'으로 저장합니다.
+2. **Asset Criteria**:
+   * For clients from states not in the 'statesites' (state-specific free legal criteria dataset), we store 'ProBono_assets' as 'NAA (No Allowed Assets)'.
+   * If all asset-related variables are NULL, we store 'ProBono_assets' as 'NC (Not Classified)'.
+   * If 'sum_assets' is less than 'AllowedAssets', we store 'ProBono_assets' as 'Y'; if higher, as 'N'.
 
-3. 최종 판정:
-   * ProBono_income과 ProBono_assets가 모두 'Y'이면 ProBono_final을 'Y'로 저장합니다.
-   * ProBono_income 또는 ProBono_assets 중 하나라도 'N'이면 ProBono_final을 'N'으로 저장합니다.
-   * ProBono_income이 'Y'이고 ProBono_assets가 'NAA'이면 ProBono_final을 'Y'로 저장합니다. (무료 법률 서비스 기준 자산이 없는 주들이 존재)
-   * ProBono_income과 상관없이 ProBono_assets가 'NC'이면 ProBono_final을 'NC'로 저장합니다.
-
-<br/> 
-
-## Step 2: 효율적인 변호사와 의뢰인 매칭
+3. **Final Determination**:
+   * If both 'ProBono_income' and 'ProBono_assets' are 'Y', we store 'ProBono_final' as 'Y'.
+   * If either 'ProBono_income' or 'ProBono_assets' is 'N', we store 'ProBono_final' as 'N'.
+   * If 'ProBono_income' is 'Y' and 'ProBono_assets' is 'NAA', we store 'ProBono_final' as 'Y'. (Since there are states without asset criteria for free legal services)
+   * Regardless of 'ProBono_income', if 'ProBono_assets' is 'NC', we store 'ProBono_final' as 'NC'.
 
 <br/> 
 
-### [문제점]
+## Step 2: Efficient Lawyer and Client Matching
+
+<br/> 
+
+### [Problem]
 ![image](https://github.com/YounseoKim62/Data-Analysis-Projects-KR/assets/161654460/2b281ef6-1fcf-43c9-8df4-91df789ba9bc)
 
 ![image](https://github.com/YounseoKim62/Data-Analysis-Projects-KR/assets/161654460/06b28e1b-fd7b-4ab6-ad76-e9c515a01689)
 
-* 의뢰인이 변호사의 전문 분야와 실력을 판단할 수 있는 요소가 없습니다.
-* 변호사가 지금까지 의뢰인들과 얼마나 상담했는지, 어떤 전문 분야에서 가장 많이 상담했는지, 얼마나 많은 의뢰를 처리했는지 한눈에 파악할 수 없습니다.
+* Clients do not have factors to assess the lawyer's area of expertise and skill.
+* It is difficult to grasp at a glance how many clients the lawyer has consulted so far, in which areas they have consulted the most, and how many cases they have handled.
 
 <br/> 
 
- ### [데이터 전처리]
+### [Data Preprocessing]
 ![image](https://github.com/YounseoKim62/Data-Analysis-Projects-KR/assets/161654460/b91fb619-1363-4c9e-a09c-f61a19ef65f9)
 
-1. 'questions' (상담 기록 데이터셋)에서 **변호사가 답을 하지 않은 기록들을 제거**합니다. (TakenByAttorneyUno가 NULL인 경우)
-2. 'questions'에서 변호사가 가장 많이 답변한 Category (전문분야)와 Subcategory (세부 전문분야)를 분석하여 변호사의 **전문분야와 세부 전문분야를 알려주는 변수들을 기존 'attorneys' (변호사 데이터셋)에 생성**합니다.
-3. 'questions'에서 변호사가 맡은 상담 기록의 횟수를 **NumberofCases라는 변수를 'attorneys'에 생성**합니다.
-4. 'attorneytimeentries' (상담 당 변호사가 할애한 시간 데이터셋)에서 변호사가 할애한 시간의 총합을 **TotalHours라는 변수를 'attorneys'에 생성**합니다.
-* *모든 변수들이 NULL인 변호사는 등록만 되어 있을 뿐, 상담을 진행하지 않은 변호사입니다.*
+1. In the 'questions' (consultation records dataset), we **remove records where the lawyer did not answer**. (When 'TakenByAttorneyUno' is NULL)
+2. We analyze the 'Category' (specialty) and 'Subcategory' (sub-specialty) that the lawyer has most frequently answered in 'questions' and create variables in the existing 'attorneys' (lawyer dataset) that **indicate the lawyer's specialty and sub-specialty**.
+3. We create a variable called **'NumberofCases'** in 'attorneys' that counts the number of consultation records the lawyer has taken in 'questions'.
+4. From 'attorneytimeentries' (dataset of time spent by lawyers per consultation), we create a variable called **'TotalHours'** in 'attorneys' that sums up the total time the lawyer has spent.
+* *Lawyers with all variables as NULL are only registered and have not conducted consultations.*
 
 <br/> 
 
-### [알고리즘 개발]
+### [Algorithm Development]
 ![image](https://github.com/YounseoKim62/Data-Analysis-Projects-KR/assets/161654460/fae49738-c932-47a7-9297-56aa836132e5)
 
-1. TotalHours와 NumberofCases의 하위 40%, 60%, 100%의 기준값을 구하여 TotalHoursLevel과 NumberofCasesLevel의 기준점을 설정합니다.
-2. TotalHours에 대해 하위 40%는 Level 1, 40%에서 80% 사이는 Level 2, 80%에서 100% 사이는 Level 3으로 설정하며, TotalHours가 0인 경우는 Level 1로 간주합니다.
-3. NumberofCases에 대해서도 동일하게 적용하여 NumberofCasesLevel 변수를 생성하되, NumberofCases가 0인 경우는 Level 1로 간주합니다.
-4. TotalHoursLevel과 NumberofCasesLevel을 종합하여 변호사의 전체적인 실력을 판단할 수 있는 Level 변수를 생성합니다.
+1. Calculate the cutoff values for the lower 40%, 60%, and 100% of 'TotalHours' and 'NumberofCases' to set the criteria for 'TotalHoursLevel' and 'NumberofCasesLevel'.
+2. For 'TotalHours', set Level 1 for the lower 40%, Level 2 for 40% to 80%, and Level 3 for 80% to 100%; if 'TotalHours' is 0, consider it as Level 1.
+3. Apply the same for 'NumberofCases' to create the 'NumberofCasesLevel' variable; if 'NumberofCases' is 0, consider it as Level 1.
+4. Combine 'TotalHoursLevel' and 'NumberofCasesLevel' to create a 'Level' variable that can assess the lawyer's overall skill.
 
 <br/> 
 
-## Step 3: 미국 내 법률 상담 트렌드 분석
+## Step 3: Analysis of Legal Consultation Trends in the U.S.
 
 <br/> 
 
-### [가장 많이 상담된 법률 카테고리]
+### [Most Consulted Legal Category]
 ![image](https://github.com/YounseoKim62/Data-Analysis-Projects-KR/assets/161654460/75161971-a632-4db0-b4d0-60bf2c085f4e)
 
-* 주 별로 미국 변호사 협회의 무료 법률 상담 서비스에서 가장 많이 상담된 카테고리는 **가족 및 아동(Family and Children)** 으로 나타남
-* 이는 많은 주에서 이혼, 양육권 분쟁, 가정 폭력 등 가족 갈등과 관련된 법률 상담이 많이 이루어지고 있음을 나타
+* The most consulted category in the American Bar Association's free legal consultation services by state is **Family and Children**.
+* This indicates that in many states, legal consultations related to family conflicts such as divorce, custody disputes, and domestic violence are prevalent.
 
 <br/> 
 
-### [두번째로 많이 상담된 법률 카테고리]
+### [Second Most Consulted Legal Category]
 ![image](https://github.com/YounseoKim62/Data-Analysis-Projects-KR/assets/161654460/88b2c294-08f8-4a43-b915-c1bfb03b289d)
 
-* 주별로 미국 변호사 협회의 무료 법률 상담 서비스에서 두 번째로 많이 상담된 카테고리는 **기타(Others)**로 나타났습니다.
-* 기타 카테고리에는 상해, 자연재해, 이민, 세금과 관련된 상담들이 포함되며, 이는 많은 주에서 일상 생활과 관련된 법률 상담이 많이 이루어지고 있음을 나타냅니다.
+* The second most consulted category in the American Bar Association's free legal consultation services by state is **Others**.
+* The 'Others' category includes consultations related to injury, natural disasters, immigration, taxes, indicating that many states have frequent legal consultations related to daily life.
 
 <br/> 
 
-### [세번째로 많이 상담된 법률 카테고리]
+### [Third Most Consulted Legal Category]
 ![image](https://github.com/YounseoKim62/Data-Analysis-Projects-KR/assets/161654460/b1cecf1d-22f5-412c-a98d-13561b8622b8)
 
-* 주별로 미국 변호사 협회의 무료 법률 상담 서비스에서 세 번째로 많이 상담된 카테고리는 **주거 및 노숙자(Housing and Homelessness)**로 나타났습니다.
-* 이는 여러 주에서 주거 안정성, 세입자 권리, 노숙자 문제와 관련된 법률 상담이 많이 이루어지고 있음을 나타냅니다.
+* The third most consulted category in the American Bar Association's free legal consultation services by state is **Housing and Homelessness**.
+* This indicates that in several states, legal consultations related to housing stability, tenant rights, and homelessness issues are prevalent.
 
 <br/> 
 
-### [시간에 따른 법률 상담 카테고리별 추이]
+### [Trends in Legal Consultation Categories Over Time]
 ![trend graph](https://github.com/YounseoKim62/Data-Analysis-Projects-KR/assets/161654460/0edbeab7-12d9-4c7e-a84d-0b0a1442211f)
 
-* 2020년도 초반부터 가족 및 아동, 기타 (상해, 자연재해, 이민, 세금과 관련된 상담), 주거 및 노숙자, 노동, 고용 및 실업에 관련 법률 상담의 급격한 증가가 관찰되었습니다.
-* 가족 및 아동 상담의 증가는 코로나로 인해 재택근무가 증가하면서 가족 간의 갈등이 많아졌기 때문으로 추측됩니다.
-* 기타 카테고리 상담의 증가는 코로나 관련 법률 상담이 자연재해로 분류되었기 때문입니다.
-* 주거 및 노숙자 상담의 증가는 팬데믹 동안 경제적 어려움으로 주거 불안정성이 심화되었기 때문으로 추정됩니다.
-* 노동, 고용 및 실업 관련 상담의 증가는 팬데믹 동안 실업률 증가와 재택근무로 인한 변화 때문으로 추정됩니다.
+* A sharp increase in legal consultations related to family and children, others (consultations related to injury, natural disasters, immigration, taxes), housing and homelessness, labor, employment, and unemployment has been observed since early 2020.
+* The increase in family and children consultations is presumed to be due to increased family conflicts as remote work increased during COVID-19.
+* The increase in consultations in the 'Others' category is because COVID-19 related legal consultations were classified as natural disasters.
+* The increase in housing and homelessness consultations is presumed to be due to intensified housing instability caused by economic difficulties during the pandemic.
+* The increase in labor, employment, and unemployment-related consultations is presumed to be due to increased unemployment rates and changes due to remote work during the pandemic.
 
 <br/> 
 
-## Step 4: 실제 적용 프로토타입
+## Step 4: Real-world Prototype Implementation
 
 <br/> 
 
-### [의뢰인의 무료 법률 서비스 자격 판별, 효율적인 변호사와 의뢰인 매칭]
+### [Determining Client Eligibility for Free Legal Services, Efficient Lawyer and Client Matching]
 ![image](https://github.com/YounseoKim62/Data-Analysis-Projects-KR/assets/161654460/c778e406-18a9-4b4f-9fea-8dbef37a751c)
 
 ![image](https://github.com/YounseoKim62/Data-Analysis-Projects-KR/assets/161654460/9b29b63d-813d-446a-ab85-0e87abcad67a)
 
-* 프로토타입을 사용함으로써 의뢰인이 무료 법률 지원 상담 서비스의 수입과 자산 기준에 부합하는지 확인할 수 있습니다.
-* 또한, 의뢰인이 신청한 상담의 법률 카테고리를 전문 분야로 가지고 있는 변호사를 추천해주며, 변호사가 지금까지 얼마나 많은 의뢰인들과 상담했는지, 어떤 전문 분야에서 가장 많이 상담했는지, 얼마나 많은 의뢰를 처리했는지 한눈에 파악할 수 있습니다.
+* By using the prototype, clients can check whether they meet the income and asset criteria for the free legal aid consultation services.
+* Also, it recommends lawyers who have the legal category of the consultation requested by the client as their specialty, and allows clients to grasp at a glance how many clients the lawyer has consulted so far, in which specialty they have consulted the most, and how many cases they have handled.
 
 <br/> 
 
-### [미국 내 법률 상담 트렌드 분석]
+### [Analysis of Legal Consultation Trends in the U.S.]
 
 <br/> 
 
@@ -150,8 +150,6 @@
 
 ![image](https://github.com/YounseoKim62/Data-Analysis-Projects-KR/assets/161654460/1edbb54a-1ad6-4b10-8684-f0a788c62b72)
 
-* 프로토타입을 사용함으로써 변호사는 어떤 법률 카테고리에 상담이 집중되는지 파악하여 업무를 효율적으로 배분하고, 시간이 많이 소요되는 카테고리에 대한 대비를 할 수 있습니다.
-* 또한, 변호사 협회는 상담 빈도가 높은 카테고리에 인적 자원과 시간을 집중 투입하여 효율적인 자원 관리를 할 수 있습니다.
-
-
+* By using the prototype, lawyers can allocate their work efficiently by identifying which legal categories consultations are concentrated in, and prepare for categories that require a lot of time.
+* Additionally, the Bar Association can manage resources efficiently by focusing human resources and time on categories with high consultation frequency.
 
