@@ -1,166 +1,168 @@
 ## Younseo Kim's Data Science Portfolio
-데이터 분석가를 꿈꾸는 **김윤서**의 프로젝트 포트폴리오입니다
+
+This is the project portfolio of **Younseo Kim**, who dreams of becoming a data analyst.
 
 ---
 
-### 주식 예측 프로젝트 요약
+### Stock Prediction Project Summary
 
-**프로그래밍 언어 및 도구**: Python (pandas, numpy, matplotlib, KNNImputer, StandardScaler, scikit-learn, xgboost, GridSearchCV)  
-**활용한 기술**: EDA, 데이터 전처리, 머신러닝  
+**Programming Languages and Tools**: Python (pandas, numpy, matplotlib, KNNImputer, StandardScaler, scikit-learn, xgboost, GridSearchCV)  
+**Technologies Used**: EDA, Data Preprocessing, Machine Learning  
 
-#### 프로젝트 소개
-- **기간**: 2024년도 봄 학기 머신러닝 수업 기말 프로젝트
-- **내용**: 나스닥에 상장된 기업들의 1년치 재무 지표를 사용하여 기업의 주가 상승 또는 하락을 예측
+#### Project Introduction
+- **Duration**: Final project for the Machine Learning course in Spring 2024
+- **Description**: Predicted stock price increases or decreases of companies listed on NASDAQ using one year of financial indicators
 
-#### 주요 단계
-1. **탐색적 데이터 분석 (EDA)**
-   - 3,138개의 기업과 229개의 변수로 구성된 데이터셋 분석
-   - 목적 변수 값 불균형 및 변수 간의 스케일 차이 문제 확인
-   - 'Name', 'Sector', 'Class'를 제외한 모든 변수에서 결측치 존재
+#### Main Steps
+1. **Exploratory Data Analysis (EDA)**
+   - Analyzed a dataset consisting of 3,138 companies and 229 variables
+   - Identified issues of target variable imbalance and scale differences among variables
+   - Found missing values in all variables except 'Name', 'Sector', and 'Class'
 
-2. **데이터 전처리**
-   - 결측치가 많은 변수 및 잘못된 데이터를 포함한 변수 제거
-   - 범주형 변수 인코딩 후 KNN 알고리즘을 사용하여 결측치 대체
-   - 데이터 표준화를 통해 모델 안정성 향상
-   - XGBoost feature importance를 활용하여 중요도가 낮은 특징 제거
+2. **Data Preprocessing**
+   - Removed variables with many missing values and those containing incorrect data
+   - Encoded categorical variables and replaced missing values using the KNN algorithm
+   - Improved model stability through data standardization
+   - Removed less important features using XGBoost feature importance
 
-3. **머신러닝 모델링 (XGBoost)**
-   - 하이퍼파라미터 튜닝을 통해 최적의 파라미터 조합 찾기
-   - GridSearchCV를 통해 학습
-   - 최종 모델의 ROC AUC 점수: 0.61
+3. **Machine Learning Modeling (XGBoost)**
+   - Found the optimal parameter combination through hyperparameter tuning
+   - Trained the model using GridSearchCV
+   - Final model's ROC AUC score: 0.61
 
-#### 결과
-- ROC AUC 점수가 0.61로, 무작위 예측보다 약간 나은 성능을 보임
-- 주가 예측의 복잡성과 한계를 인식, 단순 수학적 모델링만으로는 정확한 예측이 어려움을 확인
+#### Results
+- Achieved an ROC AUC score of 0.61, slightly better than random guessing
+- Recognized the complexity and limitations of stock price prediction; confirmed that accurate predictions are difficult with simple mathematical modeling alone
 
-#### 느낀점
-- 데이터셋에는 결측치나 잘못 입력된 변수 값이 있을 수 있으므로 세심한 관찰이 필요
-- 결측치 처리 방법으로 mean이나 median 외에도 다양한 방법이 있음을 알게 됨
-- 변수가 많고 각 변수의 값 스케일이 크게 다를 경우, 표준화 또는 정규화가 필요함 (단, 사용하는 머신러닝 알고리즘에 따라 표준화나 정규화 중 하나만 선택하여 시행)
+#### Reflections
+- Careful observation is necessary as datasets may contain missing values or incorrectly entered variable values
+- Learned that there are various methods for handling missing values beyond mean or median imputation
+- Recognized the need for standardization or normalization when dealing with many variables with significantly different scales (however, depending on the machine learning algorithm used, choose either standardization or normalization)
 
-#### [주식 예측 프로젝트 리포트](https://github.com/YounseoKim62/Data-Analysis-Projects-KR/blob/84b5bbaf73199e68016e730f3e19fe3fb3f866ec/%EC%A3%BC%EC%8B%9D%20%EC%98%88%EC%B8%A1%20%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8/%EC%A3%BC%EC%8B%9D%20%EC%98%88%EC%B8%A1%20%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8.pdf)
+#### [Stock Prediction Project Report](https://github.com/YounseoKim62/Data-Analysis-Projects-KR/blob/84b5bbaf73199e68016e730f3e19fe3fb3f866ec/%EC%A3%BC%EC%8B%9D%20%EC%98%88%EC%B8%A1%20%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8/%EC%A3%BC%EC%8B%9D%20%EC%98%88%EC%B8%A1%20%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8.pdf)
 ---
 
-### 텍스트 분류 프로젝트 요약
+### Text Classification Project Summary
 
-**프로그래밍 언어 및 도구**: Python (pandas, numpy, nltk, WordNetLemmatizer, TfidfVectorizer, scikit-learn, LogisticRegression, MultinomialNB, xgboost, StackingClassifier, GridSearchCV)  
-**활용한 기술**: 데이터 전처리, 머신러닝  
+**Programming Languages and Tools**: Python (pandas, numpy, nltk, WordNetLemmatizer, TfidfVectorizer, scikit-learn, LogisticRegression, MultinomialNB, xgboost, StackingClassifier, GridSearchCV)  
+**Technologies Used**: Data Preprocessing, Machine Learning  
 
-#### 프로젝트 소개
-- **기간**: 2024년도 봄 학기 머신러닝 수업 중간 프로젝트
-- **내용**: 의료 진단 차트의 텍스트를 분류 알고리즘 모델을 활용하여 6개의 카테고리 중 한 가지로 분류
+#### Project Introduction
+- **Duration**: Midterm project for the Machine Learning course in Spring 2024
+- **Description**: Classified text from medical diagnostic charts into one of six categories using classification algorithm models
 
-#### 주요 단계
-1. **데이터 전처리**
-   - 소문자 변경과 특수문자 제거
-   - 불용어 제거를 통해 모델이 중요한 단어들에 집중하도록 함
-   - 표제화를 통해 단어 형태를 일관되게 처리하여 노이즈 제거
-   - TF-IDF를 사용하여 텍스트 데이터를 벡터화
+#### Main Steps
+1. **Data Preprocessing**
+   - Converted text to lowercase and removed special characters
+   - Removed stop words to allow the model to focus on important words
+   - Reduced noise by lemmatizing words to handle different word forms consistently
+   - Vectorized text data using TF-IDF
 
-2. **머신러닝 모델링 (Stacking Algorithm)**
-   - 로지스틱 회귀, XGBoost, Naive Bayes Classifier를 결합한 스태킹 알고리즘 사용
-   - 하이퍼파라미터 튜닝을 통해 최적의 파라미터 조합 찾기
-   - GridSearchCV를 통해 학습
-   - 최종 모델의 Mean F-1 score: 0.85
+2. **Machine Learning Modeling (Stacking Algorithm)**
+   - Used a stacking algorithm combining Logistic Regression, XGBoost, and Naive Bayes Classifier
+   - Found the optimal parameter combination through hyperparameter tuning
+   - Trained the model using GridSearchCV
+   - Final model's Mean F-1 score: 0.85
 
-#### 결과
-- Mean F-1 score가 0.85로, 높은 정밀도와 재현율을 구현
-- 모델이 실제 긍정 사례를 잘 찾아내며, 오탐과 누락이 적음
+#### Results
+- Achieved a Mean F-1 score of 0.85, demonstrating high precision and recall
+- The model effectively identified actual positive cases with few false positives and negatives
 
-#### 느낀점
-- 처음 접해보는 텍스트 데이터의 전반적인 전처리 과정을 경험할 수 있었
-- 텍스트 데이터의 형태(어떻게 텍스트가 저장되어 있는지)에 따라 전처리 과정이 달라질 수 있음을 깨달
-- 복잡한 텍스트 데이터를 분류하기 위해 앙상블 기법인 Stacking Algorithm을 사용해볼 수 있었음
+#### Reflections
+- Was able to experience the overall preprocessing steps for text data, which was my first time handling such data
+- Realized that the preprocessing steps can vary depending on the form of the text data (how the text is stored)
+- Had the opportunity to use an ensemble method, the Stacking Algorithm, to classify complex text data
 
-#### [텍스트 분류 프로젝트 리포트](https://github.com/YounseoKim62/Data-Analysis-Projects-KR/blob/451f0a247dd87e547d319b8b9ba65fc7647432fe/%ED%85%8D%EC%8A%A4%ED%8A%B8%20%EB%B6%84%EB%A5%98%20%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8/%ED%85%8D%EC%8A%A4%ED%8A%B8%20%EB%B6%84%EB%A5%98%20%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8.pdf)
+#### [Text Classification Project Report](https://github.com/YounseoKim62/Data-Analysis-Projects-KR/blob/451f0a247dd87e547d319b8b9ba65fc7647432fe/%ED%85%8D%EC%8A%A4%ED%8A%B8%20%EB%B6%84%EB%A5%98%20%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8/%ED%85%8D%EC%8A%A4%ED%8A%B8%20%EB%B6%84%EB%A5%98%20%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8.pdf)
 ---
 
-### DataFest (데이터 경진 대회) 2023 요약
+### DataFest (Data Competition) 2023 Summary
 
-**수상**: The American Statistical Association DataFest - 최우수상 수상 (2023)  
-**팀**: Team Megabyte (Younseo Kim, Yong Jun Choi, Woosung Lim, Hyeongkwon Kim, Taehwan Lee)  
-**프로그래밍 언어 및 도구**: R (tidyverse, dplyr, ggplot2), Tableau, Excel, Figma  
-**활용한 기술**: EDA, 데이터 전처리, 알고리즘 개발, 프로토타입 UI/UX 디자인  
+**Award**: The American Statistical Association DataFest - Best in Show (2023)  
+**Team**: Team Megabyte (Younseo Kim, Yong Jun Choi, Woosung Lim, Hyeongkwon Kim, Taehwan Lee)  
+**Programming Languages and Tools**: R (tidyverse, dplyr, ggplot2), Tableau, Excel, Figma  
+**Technologies Used**: EDA, Data Preprocessing, Algorithm Development, Prototype UI/UX Design  
 
-#### 프로젝트 소개
-- **기간**: 2023.03.25 ~ 2023.03.26
-- **내용**: 미국 변호사 협회의 50만 건 이상의 의뢰인 데이터, 2만 명의 변호사 데이터, 30만 건 이상의 상담 데이터를 활용하여 협회의 무료 법률 지원 상담 서비스의 효율성을 개선
+#### Project Introduction
+- **Duration**: 2023.03.25 ~ 2023.03.26
+- **Description**: Improved the efficiency of the association's free legal aid consultation services by utilizing over 500,000 client data records, 20,000 lawyer data records, and over 300,000 consultation records from the American Bar Association
 
-#### 주요 단계
-1. **의뢰인의 무료 법률 서비스 자격 판별**
-   - 주마다 다른 무료 법률 서비스 기준과 자산 및 수입 변수를 통합하여 의뢰인의 자격을 판별하는 알고리즘 개발
-   - 데이터 전처리: 범주형 변수를 숫자형 변수로 변환, 데이터셋 통합, 결측치 처리
-   - 알고리즘 개발: 수입 및 자산 기준에 따라 무료 법률 서비스 자격을 판별하는 로직 구현
+#### Main Steps
+1. **Determining Client Eligibility for Free Legal Services**
+   - Developed an algorithm to determine client eligibility by integrating state-specific criteria for free legal services with asset and income variables
+   - Data Preprocessing: Converted categorical variables to numerical, merged datasets, handled missing values
+   - Algorithm Development: Implemented logic to determine eligibility for free legal services based on income and asset criteria
 
-2. **효율적인 변호사와 의뢰인 매칭**
-   - 변호사의 전문 분야와 상담 횟수, 상담 시간 등을 고려하여 의뢰인과 변호사를 효율적으로 매칭
-   - 데이터 전처리: 변호사와 상담 기록 데이터 통합, 전문 분야 및 상담 횟수 변수 생성
-   - 알고리즘 개발: 변호사의 상담 시간과 횟수를 기준으로 변호사의 실력을 판단하는 로직 구현
+2. **Efficient Lawyer and Client Matching**
+   - Matched clients and lawyers efficiently by considering lawyers' specialties, number of consultations, and consultation times
+   - Data Preprocessing: Merged lawyer and consultation record data, created variables for specialties and consultation counts
+   - Algorithm Development: Implemented logic to assess lawyers' expertise based on consultation times and counts
 
-3. **미국 내 법률 상담 트렌드 분석**
-   - 법률 상담 데이터 분석을 통해 주별로 많이 상담된 법률 카테고리 파악
-   - 가족 및 아동, 기타 (상해, 자연재해, 이민, 세금), 주거 및 노숙자 관련 상담이 많이 이루어짐을 확인
-   - 시간에 따른 법률 상담 카테고리별 추이 분석: 팬데믹 동안 특정 카테고리의 상담 증가 추세 파악
+3. **Analysis of Legal Consultation Trends in the U.S.**
+   - Identified the most consulted legal categories by state through analysis of legal consultation data
+   - Found that consultations were frequent in categories like family and children, others (injury, natural disaster, immigration, taxes), housing and homelessness
+   - Analyzed trends in legal consultation categories over time: identified increasing trends in certain categories during the pandemic
 
-4. **실제 적용 프로토타입**
-   - 의뢰인의 무료 법률 서비스 자격 판별 및 변호사와 의뢰인 매칭을 위한 프로토타입 개발
-   - 의뢰인이 신청한 상담의 법률 카테고리에 맞는 변호사를 추천하고, 변호사의 전문 분야와 상담 실적을 한눈에 파악할 수 있도록 함
+4. **Real-world Prototype Implementation**
+   - Developed a prototype for determining client eligibility for free legal services and matching clients with lawyers
+   - Enabled recommending lawyers matching the legal category of the client's requested consultation and allowed for an overview of lawyers' specialties and consultation performance
 
-#### 결과
-- 의뢰인의 자격 판별과 변호사 매칭의 효율성을 개선하여 무료 법률 지원 상담 서비스의 효과성을 높임
-- 법률 상담 트렌드 분석을 통해 자원 배분의 효율성을 높이고, 변호사 협회의 자원 관리를 최적화함
+#### Results
+- Improved the effectiveness of free legal aid consultation services by enhancing the efficiency of client eligibility determination and lawyer matching
+- Enhanced resource allocation efficiency through analysis of legal consultation trends, optimizing resource management for the Bar Association
 
-#### 느낀점
-- 실무에서 사용되는 데이터셋은 수업에서 사용하는 데이터셋처럼 깔끔하게 정리되어 있지 않음
-   - 여러 테이블로 나누어져 있거나, 숫자지만 범주형 변수로 저장되어 있거나, 변수 이름이 이해하기 어려운 형식으로 축약되어 있는 경우가 많음
-- 데이터를 어떻게 해석하고, 이를 시각화나 머신러닝을 통해 의미 있는 인사이트로 도출할 것인지가 데이터 분석의 핵심 포인트
-- 팀원들과 협업하며 다양한 의견을 존중하고 경청하며, 비판을 수용했을 때 더 좋은 결과로 이어질 수 있다는 것을 깨달음
+#### Reflections
+- Realized that datasets used in practice are not as neatly organized as those used in class
+   - Often divided into multiple tables, stored as categorical variables despite being numeric, or variable names are abbreviated in hard-to-understand formats
+- The core point of data analysis is how to interpret data and derive meaningful insights through visualization or machine learning
+- Learned that respecting and listening to various opinions while collaborating with team members and accepting criticism can lead to better outcomes
 
-#### [DataFest2023 리포트](https://github.com/YounseoKim62/Data-Analysis-Projects-KR/blob/451f0a247dd87e547d319b8b9ba65fc7647432fe/DataFest2023/DataFest2023.pdf)
+#### [DataFest2023 Report](https://github.com/YounseoKim62/Data-Analysis-Projects-KR/blob/451f0a247dd87e547d319b8b9ba65fc7647432fe/DataFest2023/DataFest2023.pdf)
 ---
 
 ### Performance of Arsenal and Tottenham Against Big 6 Clubs: A Goals-Based Analysis (2009-2019)
 
-**프로그래밍 언어 및 도구**: R (tidyverse, ANOVA) <br/>
-**활용한 기술**: EDA, 데이터 전처리, ANOVA 분석  
+**Programming Languages and Tools**: R (tidyverse, ANOVA)  
+**Technologies Used**: EDA, Data Preprocessing, ANOVA Analysis  
 
-#### 프로젝트 소개
-- **목적**: 2009년부터 2019년까지 아스날과 토트넘의 성적을 프리미어 리그 빅 6 클럽들 상대로 분석
-- **주요 연구 질문**:
-  1. 홈/원정 경기 위치가 성적에 영향을 미치는가?
-  2. 시즌별 성적 변화가 있는가?
-  3. 빅 6 클럽들 상대로 어느 팀이 더 좋은 성적을 거두었는가?
+#### Project Introduction
+- **Objective**: Analyzed the performance of Arsenal and Tottenham against Premier League Big 6 clubs from 2009 to 2019
+- **Main Research Questions**:
+  1. Does the location of the match (home/away) affect performance?
+  2. Are there changes in performance by season?
+  3. Which team performed better against Big 6 clubs?
 
-#### 주요 단계
-1. **데이터 수집 및 전처리**
-   - 2009-2019 시즌 동안 아스날과 토트넘이 빅 6 클럽들 (첼시, 리버풀, 맨체스터 시티, 맨체스터 유나이티드) 상대로 치른 경기 데이터를 수집
-   - 홈/어웨이, 경기 상대, 득점 수 등의 데이터를 포함하여 정리
+#### Main Steps
+1. **Data Collection and Preprocessing**
+   - Collected match data where Arsenal and Tottenham played against Big 6 clubs (Chelsea, Liverpool, Manchester City, Manchester United) during the 2009-2019 seasons
+   - Organized data including home/away, opponent, number of goals scored, etc.
 
-2. **탐색적 데이터 분석 (EDA)**
-   - 각 팀의 홈/어웨이별 득점 통계 분석
-   - 시즌별 성적 변화를 파악하기 위한 그래프 및 통계 분석
+2. **Exploratory Data Analysis (EDA)**
+   - Analyzed goal statistics for each team based on home/away games
+   - Created graphs and statistical analyses to understand performance changes by season
 
-3. **ANOVA 분석**
-   - 팀과 위치, 시즌의 상호작용 효과를 분석하여 성적에 미치는 영향을 평가
-   - 주요 가정 (정규성, 등분산성, 독립성, 구형성) 확인
+3. **ANOVA Analysis**
+   - Evaluated the impact on performance by analyzing the interaction effects of team, location, and season
+   - Verified key assumptions (normality, homoscedasticity, independence, sphericity)
 
-#### 결과
-1. **홈/원정 경기 효과**
-   - ANOVA 분석 결과, 팀과 위치의 상호작용이 통계적으로 유의미함을 확인
-   - 그러나 팀 간의 쌍별 비교에서는 유의미한 결과를 도출하지 못해 추가적인 연구 필요
+#### Results
+1. **Home/Away Match Effect**
+   - Confirmed that the interaction between team and location is statistically significant through ANOVA analysis
+   - However, could not derive significant results from pairwise comparisons between teams, indicating a need for further research
 
-2. **시즌별 성적 변화**
-   - 시즌이 성적에 미치는 영향은 통계적으로 유의미하지 않음
-   - 아스날과 토트넘은 대체로 일관된 성적을 유지
+2. **Performance Changes by Season**
+   - The effect of season on performance is not statistically significant
+   - Arsenal and Tottenham maintained relatively consistent performance
 
-3. **팀 간 비교**
-   - 아스날과 토트넘의 성적 차이는 통계적으로 유의미하지 않음
-   - 두 팀 모두 빅 6 클럽들 상대로 유사한 성적을 기록
+3. **Comparison Between Teams**
+   - The performance difference between Arsenal and Tottenham is not statistically significant
+   - Both teams recorded similar performance against Big 6 clubs
 
-#### 한계 및 향후 연구
-- **한계**: Random Effect 부재, 두 팀만 선택, Confounding 변수 통제 부족
-- **향후 연구**: Random Effect 추가, 더 많은 팀과 시즌 분석, Confounding 변수 통제 방법 모색
+#### Limitations and Future Research
+- **Limitations**: Absence of Random Effect, selection of only two teams, lack of control for confounding variables
+- **Future Research**: Incorporate Random Effect, analyze more teams and seasons, explore methods to control for confounding variables
 
 #### [Performance of Arsenal and Tottenham Against Big 6 Clubs: A Goals-Based Analysis](https://github.com/YounseoKim62/Data-Analysis-Projects-KR/blob/dfb876146a143cdb8658730f4d7afe68315a7793/Performance%20of%20Arsenal%20and%20Tottenham%20Against%20Big%206%20Clubs%3A%20A%20Goals-Based%20Analysis%20(2009-2019)/Performance-of-Arsenal-and-Tottenham-Against-Big-6-Clubs-A.pdf)
 
+---
 
