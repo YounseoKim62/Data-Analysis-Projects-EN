@@ -162,7 +162,7 @@ This is the project portfolio of **Younseo Kim**, who dreams of becoming a data 
 - **Limitations**: Absence of Random Effect, selection of only two teams, lack of control for confounding variables
 - **Future Research**: Incorporate Random Effect, analyze more teams and seasons, explore methods to control for confounding variables
 
-#### [Performance of Arsenal and Tottenham Against Big 6 Clubs: A Goals-Based Analysis](https://github.com/YounseoKim62/Data-Analysis-Projects-KR/blob/dfb876146a143cdb8658730f4d7afe68315a7793/Performance%20of%20Arsenal%20and%20Tottenham%20Against%20Big%206%20Clubs%3A%20A%20Goals-Based%20Analysis%20(2009-2019)/Performance-of-Arsenal-and-Tottenham-Against-Big-6-Clubs-A.pdf)
+#### [Performance of Arsenal and Tottenham Against Big 6 Clubs: A Goals-Based Analysis](https://github.com/YounseoKim62/Data-Analysis-Projects-EN/blob/3f5d63d71dea293c03fea2544070ee5306dd6e6c/Performance%20of%20Arsenal%20and%20Tottenham%20Against%20Big%206%20Clubs%3A%20A%20Goals-Based%20Analysis%20(2009-2019)/Performance-of-Arsenal-and-Tottenham-Against-Big-6-Clubs-A.pdf)
 
 ---
 
