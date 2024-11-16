@@ -73,7 +73,7 @@ This is the project portfolio of **Younseo Kim**, who dreams of becoming a data 
 - Realized that the preprocessing steps can vary depending on the form of the text data (how the text is stored)
 - Had the opportunity to use an ensemble method, the Stacking Algorithm, to classify complex text data
 
-#### [Text Classification Project Report](https://github.com/YounseoKim62/Data-Analysis-Projects-KR/blob/451f0a247dd87e547d319b8b9ba65fc7647432fe/%ED%85%8D%EC%8A%A4%ED%8A%B8%20%EB%B6%84%EB%A5%98%20%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8/%ED%85%8D%EC%8A%A4%ED%8A%B8%20%EB%B6%84%EB%A5%98%20%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8.pdf)
+#### [Text Classification Project Report](https://github.com/YounseoKim62/Data-Analysis-Projects-EN/blob/3a3dc695fb2df4048fcc443eb7d0fce822318de3/Text%20Classification%20Project/text_classification.md)
 ---
 
 ### DataFest (Data Competition) 2023 Summary
